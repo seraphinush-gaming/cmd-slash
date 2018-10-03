@@ -1,0 +1,15 @@
+{
+	"files": {
+		"README.md": "bc61d40a41e7ab69954435e1bfd9d064784c69c2c668397378a20f4573fe2d6a",
+		"index.js": "6dc9d08e0fad9487865d1ccbfa3d14f75bf1d80331c9fb62b855386647488d98",
+		"module.json": "7da5595a1c2a440ea7fae4e33b65640dd218a64e7665b515d9a9558e46cc5deb"
+	},
+	"defs": {
+		"C_LEAVE_PARTY": 1,
+		"C_RESET_ALL_DUNGEON": 1,
+		"C_RETURN_TO_LOBBY": 1,
+		"C_SELECT_CHANNEL": 1,
+		"S_CURRENT_CHANNEL": 2,
+		"S_NPC_MENU_SELECT": 1
+	}
+}
