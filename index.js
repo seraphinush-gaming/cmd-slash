@@ -1,35 +1,33 @@
-// Version 2.00 r:00
+// Version 2.00 r:03
 'use strict';
 
-class CommandSlash {
+class AutoQol {
 
-	constructor(mod) {
+    constructor(mod) {
 
-		this.mod = mod;
-		this.cmd = m.command || m.require.command;
-		this.submodules = {};
+        this.mod = mod;
+        this.cmd = mod.command || mod.require.command;
+        this.config = require('./config.json');
+        this.submodules = {};
 
-		this.initialize("cmd-broker");
-		this.initialize("cmd-channel");
-		this.initialize("cmd-general");
-		this.initialize("cmd-lobby");
+        if (this.config.autoCutscene) { this.initialize("auto-cutscene"); }
+        if (this.config.autoInspect) { this.initialize("auto-inspect"); }
 
-	}
+    }
 
-	destructor() {
-        this.mod = undefined;
-
+    destructor() {
         for(let submodule in this.submodules) {
             this.submodules[submodule].destructor();
             delete this[submodule];
         }
 
         this.submodules = undefined;
+        this.config = undefined;
         this.cmd = undefined;
         this.mod = undefined;
     }
 
-	initialize(submodules) {
+    initialize(submodules) {
         if (typeof submodules === 'string') {
             submodules = [submodules];
         }
@@ -42,7 +40,7 @@ class CommandSlash {
                     this[submodule] = this.submodules[submodule];
                 }
                 catch (e) {
-                    console.log(`[cmd-slash] Unable to load submodule ${submodule}: ${e}`);
+                    console.log(`[auto-qol] Unable to load submodule ${submodule}: ${e}`);
                 }
             }
         }
@@ -50,9 +48,6 @@ class CommandSlash {
 
 }
 
-module.exports = function CommandSlashLoader(mod) {
-
-	mod.game('change_zone', (zone) => { this.myZone = zone; });
-
-	return new CommandSlash(mod);
+module.exports = function AutoQolLoader(mod) {
+    return new AutoQol(mod)
 }

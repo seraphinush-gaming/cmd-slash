@@ -1,20 +1,19 @@
 {
 	"files": {
-		"README.md": "5c30d6a64964dec69c628f65e572269c34f7801abad0e6c3523953a2cf288db6",
-		"index.js": "4cdc5296569d89dc457c903198646585b5c006f12a240a7d976fbc5ca26e1380",
-		"module.json": "7da5595a1c2a440ea7fae4e33b65640dd218a64e7665b515d9a9558e46cc5deb",
-		"submodules/cmd-broker.js": "d75e6befe7dccdabcbfe396037ebb398fbb344910d148fe28da173768aec2a14",
-		"submodules/cmd-channel.js": "7c1563fc37bc28ecc9fbbf609e158cb3c103967a9aa458c3d9c5dda891b971a5",
-		"submodules/cmd-general.js": "3b388cad1829c9dc8247d76cae8b793e726b5b797bb7a463680c9e7ec1fac8b9",
-		"submodules/cmd-lobby.js": "244b17b1ac01a2b9e0ae533e07e4bd300d568586193b0926c472e10cfc5bffd9"
+		"README.md": "842509c96e74dedfce03174c87a069fe21cb216bb63a79aa7976137d85479121",
+		"config.json": {
+			"overwrite": false,
+			"hash": "58bc25c10742b45bfc584ccddef6804f0d273226b05a5fa6386e98c57808ecd8"
+		},
+		"index.js": "463c6295439ef507663ce8a69e73c6041a1bed9e021b0a0707c9d4017ab18b33",
+		"module.json": "5cd1b2699c1b9f8b7198785ec81a27883b0cb52efe795aa33515cbc59464186c",
+		"submodules/auto-cutscene.js": "0243ecaa6e8a1f7beafd24396e5baeb94dad2d4177f0b8b1be9e6383d389c720",
+		"submodules/auto-inspect.js": "e8d91b0230c1d1260ee7c80b0108c8a200c01855128bbd338349e899f8c3fc48"
 	},
 	"defs": {
-		"C_LEAVE_PARTY": 1,
-		"C_RESET_ALL_DUNGEON": 1,
-		"C_RETURN_TO_LOBBY": 1,
-		"C_SELECT_CHANNEL": 1,
-		"S_CURRENT_CHANNEL": 2,
-		"S_NPC_MENU_SELECT": 1,
-		"S_REQUEST_CONTRACT": 1
+		"C_END_MOVIE": 1,
+		"C_REQUEST_USER_PAPERDOLL_INFO": 1,
+		"S_ANSWER_INTERACTIVE": 2,
+		"S_PLAY_MOVIE": 1
 	}
 }

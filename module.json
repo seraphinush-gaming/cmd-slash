@@ -1,5 +1,5 @@
 {
     "disableAutoUpdate": false,
-    "options": { "niceName": "cmd-slash" },
-    "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/"]
+    "options": { "niceName": "auto-qol" },
+    "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/auto-qol/master/"]
 }
