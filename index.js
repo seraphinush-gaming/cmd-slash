@@ -1,4 +1,4 @@
-// Version 2.00 r:00
+// Version 2.00 r:01
 'use strict';
 
 class CommandSlash {
