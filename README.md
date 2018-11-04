@@ -17,6 +17,7 @@ tera-proxy compilation module for automated functions
   - Default is `true`
 
 ## Info
+- Code schematic based on [`tera-game-state`](https://github.com/caali-hackerman/tera-game-state)
 - Compiled modules :
   - `auto-cutscene` (mod. by [baldera-mods](https://github.com/baldera-mods), branch [seraphinush-gaming](https://github.com/ylennia-archives/auto-cutscene))
   - `auto-inspect` (branch [seraphinush-gaming](https://github.com/ylennia-archives/auto-inspect))
