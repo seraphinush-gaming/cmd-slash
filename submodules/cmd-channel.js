@@ -7,7 +7,13 @@ class CommandChannel {
         this.channelPrev = 0;
         this.myZone = 0;
 
-        this.installCommands();
+        this.parent.cmd.add(['ch', '초'], (p) =>  {
+            if (!p) this.changeChannel(this.channelCurr + 1);
+            else if (!isNaN(p)) { this.changeChannel(p); }
+            else if (p === 'b' || p === 'ㅠ') this.changeChannel(this.channelPrev);
+            else send(`Invalid argument. usage : ch (num)`);
+        });
+
         this.installHooks();
 
     }
@@ -19,28 +25,19 @@ class CommandChannel {
         this.parent = undefined;
     }
 
-    installCommands() {
-        this.parent.cmd.add(['ch', '초'], function (p) {
-            if (!p) this.changeChannel(channelCurr + 1);
-            else if (!isNaN(p)) { this.changeChannel(p); }
-            else if (p === 'b' || p === 'ㅠ') this.changeChannel(channelPrev);
-            else send(`Invalid argument. usage : ch (num)`);
-        });
-    }
-
     installHook(name, version, cb) {
         this.parent.mod.hook(name, version, cb);
     }
 
     installHooks() {
-
-        installHook('S_CURRENT_CHANNEL', 2, function (e) {
+        this.installHook('S_CURRENT_CHANNEL', 2, function (e) {
             if (this.channelCurr !== e.channel) {
                 this.channelPrev = this.channelCurr;
                 this.channelCurr = e.channel;
             }
         });
 
+        this.parent.mod.game.me.on('change_zone', (zone) => { this.myZone = zone; });
     }
 
     changeChannel(num) {

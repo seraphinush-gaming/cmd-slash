@@ -1,33 +1,33 @@
-// Version 2.00 r:03
+// Version 2.00 r:00
 'use strict';
 
-class AutoQol {
+class CommandSlash {
 
-    constructor(mod) {
+	constructor(mod) {
 
-        this.mod = mod;
-        this.cmd = mod.command || mod.require.command;
-        this.config = require('./config.json');
-        this.submodules = {};
+		this.mod = mod;
+		this.cmd = mod.command || mod.require.command;
+		this.submodules = {};
 
-        if (this.config.autoCutscene) { this.initialize("auto-cutscene"); }
-        if (this.config.autoInspect) { this.initialize("auto-inspect"); }
+		this.initialize("cmd-broker");
+		this.initialize("cmd-channel");
+		this.initialize("cmd-general");
+		this.initialize("cmd-lobby");
 
-    }
+	}
 
-    destructor() {
+	destructor() {
         for(let submodule in this.submodules) {
             this.submodules[submodule].destructor();
             delete this[submodule];
         }
 
         this.submodules = undefined;
-        this.config = undefined;
         this.cmd = undefined;
         this.mod = undefined;
     }
 
-    initialize(submodules) {
+	initialize(submodules) {
         if (typeof submodules === 'string') {
             submodules = [submodules];
         }
@@ -40,7 +40,7 @@ class AutoQol {
                     this[submodule] = this.submodules[submodule];
                 }
                 catch (e) {
-                    console.log(`[auto-qol] Unable to load submodule ${submodule}: ${e}`);
+                    console.log(`[cmd-slash] Unable to load submodule ${submodule}: ${e}`);
                 }
             }
         }
@@ -48,6 +48,6 @@ class AutoQol {
 
 }
 
-module.exports = function AutoQolLoader(mod) {
-    return new AutoQol(mod)
+module.exports = function CommandSlashLoader(mod) {
+	return new CommandSlash(mod);
 }
