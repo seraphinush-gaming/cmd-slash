@@ -45,8 +45,10 @@ class CommandChannel {
         switch (num) {
             case 0:
                 num = 10;
+                break;
             case (this.channelCurr):
                 this.send(`Same channel selected.`);
+                break;
         }
         num -= 1;
         this.parent.mod.send('C_SELECT_CHANNEL', 1, {
