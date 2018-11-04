@@ -1,6 +1,9 @@
 # cmd-slash
 tera-proxy module compiled to use slash commands for common functions
 
+## Auto-update guide
+- Create a folder called `cmd-slash` in `tera-proxy/bin/node_modules` and download [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/module.json) (right-click save link as...) into the folder
+
 ## Dependency
 - `command` module
 - `tera-game-state` module
@@ -37,6 +40,8 @@ tera-proxy module compiled to use slash commands for common functions
 ## Changelog
 <details>
 
+    2.00
+    - Refactored into submodules
     1.00
     - Initial commit
     - Added `talent` option
