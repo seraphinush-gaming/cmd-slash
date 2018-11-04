@@ -7,8 +7,6 @@ class CommandChannel {
         this.channelPrev = 0;
         this.myZone = 0;
 
-        this.parent.mod.game.me.on('change_zone', (zone) => { this.myZone = zone; });
-
         this.parent.cmd.add(['ch', '초'], (p) =>  {
             if (!p) this.changeChannel(this.channelCurr + 1);
             else if (!isNaN(p)) { this.changeChannel(p); }
@@ -32,12 +30,14 @@ class CommandChannel {
     }
 
     installHooks() {
-        this.installHook('S_CURRENT_CHANNEL', 2, function (e) {
+        this.installHook('S_CURRENT_CHANNEL', 2, (e) => {
             if (this.channelCurr !== e.channel) {
                 this.channelPrev = this.channelCurr;
                 this.channelCurr = e.channel;
             }
         });
+
+        this.parent.mod.game.me.on('change_zone', (zone) => { this.myZone = zone; });
     }
 
     changeChannel(num) {
@@ -48,6 +48,8 @@ class CommandChannel {
                 break;
             case (this.channelCurr):
                 this.send(`Same channel selected.`);
+                break;
+            default:
                 break;
         }
         num -= 1;
