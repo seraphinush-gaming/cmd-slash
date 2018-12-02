@@ -1,18 +1,27 @@
-// Version 2.00 r:04
+// Version 2.01 r:00
 'use strict';
+
+const fs = require('fs');
+const path = require('path');
 
 class CommandSlash {
 
 	constructor(mod) {
 
 		this.mod = mod;
-		this.cmd = mod.command || mod.require.command;
+        this.cmd = mod.command || mod.require.command;
 		this.submodules = {};
 
-		this.initialize("cmd-broker");
-		this.initialize("cmd-channel");
-		this.initialize("cmd-general");
-		this.initialize("cmd-lobby");
+        let list = [];
+        if (fs.existsSync(path.join(__dirname, "submodules"))) {
+            list = fs.readdirSync(path.join(__dirname, "submodules"));
+        } else {
+            fs.mkdirSync(path.join(__dirname, "submodules"));
+        }
+
+        for (let i = 0, n = list.length; i < n; i++) {
+            this.initialize(list[i]);
+        }
 
 	}
 
@@ -40,7 +49,7 @@ class CommandSlash {
                     this[submodule] = this.submodules[submodule];
                 }
                 catch (e) {
-                    console.log(`[cmd-slash] Unable to load submodule ${submodule}: ${e}`);
+                    console.log(`\n[cmd-slash] : Unable to load submodule [${submodule}] .. \n - ${e}\n`);
                 }
             }
         }

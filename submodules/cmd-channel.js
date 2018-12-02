@@ -7,11 +7,15 @@ class CommandChannel {
         this.channelPrev = 0;
         this.myZone = 0;
 
-        this.parent.cmd.add(['ch', '초'], (p) =>  {
-            if (!p) this.changeChannel(this.channelCurr + 1);
-            else if (!isNaN(p)) { this.changeChannel(p); }
-            else if (p === 'b' || p === 'ㅠ') this.changeChannel(this.channelPrev);
-            else this.send(`Invalid argument. usage : ch (num)`);
+        this.parent.cmd.add(['ch', '초'], (p) => {
+            if (!p) 
+                this.changeChannel(this.channelCurr + 1);
+            else if (!isNaN(p)) 
+                this.changeChannel(p);
+            else if (p === 'b' || p === 'ㅠ') 
+                this.changeChannel(this.channelPrev);
+            else 
+                this.send(`Invalid argument. usage : ch (num)`);
         });
 
         this.installHooks();
@@ -41,7 +45,8 @@ class CommandChannel {
     }
 
     changeChannel(num) {
-        if (this.channelCurr > 20) return;
+        if (this.channelCurr > 20)
+            return;
         switch (num) {
             case 0:
                 num = 10;
