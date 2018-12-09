@@ -27,7 +27,7 @@ class CommandGeneral {
         this.parent = undefined;
     }
 
-    send(msg) { this.parent.cmd.message(`: ` + msg); }
+    send(msg) { this.parent.cmd.message(': ' + msg); }
 
 }
 

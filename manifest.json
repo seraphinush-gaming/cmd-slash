@@ -1,12 +1,12 @@
 {
 	"files": {
-		"README.md": "07fe5928b87283abe73683a7137abc3cb9ef4b535df3fa2fb44e03e8ae5a599b",
-		"index.js": "7a1dd422e70727a41597a9fdb859eb1ffcdc80194e306074452ab291cb9b0154",
-		"module.json": "7da5595a1c2a440ea7fae4e33b65640dd218a64e7665b515d9a9558e46cc5deb",
+		"README.md": "0cafd55eb376d487ab397420fe533408533e63232c13dbef2883d105e5617307",
+		"index.js": "962f6ba5bb407fb5b79150836b8c1882488e49106ff458852ed068d5d11a9805",
+		"module.json": "a97dcd397e08ed567eb3e3bebcc101db6d3a2b18254a3633998479ac3dc8eb64",
 		"submodules/cmd-broker.js": "f84ed9a3534764e5a88fc1283fe1fd11f49d9ba6b1d9d23d81f1d42885a70337",
-		"submodules/cmd-channel.js": "996601d43ea288569ee61676b08b26fb37d91529c854f11cf2cd5a2e6ba49f2b",
-		"submodules/cmd-exit.js": "0a20ce500576676b8b448dea61178d9d8f39d32e4568b565afd82c82d9d38b4f",
-		"submodules/cmd-general.js": "b4c4373134691cdbefb95f0081661f2690bf88c8f0e41af15b57215f3ba76c04",
+		"submodules/cmd-channel.js": "3977956210e2d1f16087573954231969a70858790ffe23dfe87ee417037a2bc5",
+		"submodules/cmd-exit.js": "9075fe6dfee74226f554f1b83d2e6375c98ef4f222e90f6ef67300df94d9ab24",
+		"submodules/cmd-general.js": "96b51dce2361ad7e380b731b971d6daf81ae74af747f0b03ed6ad9b3056ab381",
 		"submodules/cmd-lobby.js": "6d2a22b3ff37937aa2ce64c5bc386dacbbab8bc21eedccb8924b858a9af39910"
 	},
 	"defs": {
@@ -16,7 +16,7 @@
 		"C_RETURN_TO_LOBBY": 1,
 		"C_SELECT_CHANNEL": 1,
 		"S_CURRENT_CHANNEL": 2,
-		"S_EXIT": 1,
+		"S_EXIT": 3,
 		"S_NPC_MENU_SELECT": 1,
 		"S_PREPARE_EXIT": "raw",
 		"S_REQUEST_CONTRACT": 1

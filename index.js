@@ -1,4 +1,3 @@
-// Version 2.01 r:00
 'use strict';
 
 const fs = require('fs');
@@ -18,7 +17,6 @@ class CommandSlash {
         } else {
             fs.mkdirSync(path.join(__dirname, "submodules"));
         }
-
         for (let i = 0, n = list.length; i < n; i++) {
             this.initialize(list[i]);
         }
@@ -49,7 +47,7 @@ class CommandSlash {
                     this[submodule] = this.submodules[submodule];
                 }
                 catch (e) {
-                    console.log(`\n[cmd-slash] : Unable to load submodule [${submodule}] .. \n - ${e}\n`);
+                    this.mod.log(`\n[cmd-slash] : Unable to load submodule [${submodule}] .. \n - ${e}\n`);
                 }
             }
         }
