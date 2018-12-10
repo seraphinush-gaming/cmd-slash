@@ -65,7 +65,7 @@ class CommandChannel {
         });
     }
 
-    send(msg) { this.parent.cmd.message(`: ` + msg); }
+    send(msg) { this.parent.cmd.message(': ' + msg); }
 
 }
 

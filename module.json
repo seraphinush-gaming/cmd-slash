@@ -1,5 +1,10 @@
 {
     "disableAutoUpdate": false,
-    "options": { "niceName": "cmd-slash" },
-    "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/"]
+    "name": "cmd-slash",
+    "author": "seraphinush",
+    "description": "tera-proxy module compiled to use slash commands for common functions",
+    "version": "2.02.00",
+    "servers": [
+        "https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/"
+    ]
 }
