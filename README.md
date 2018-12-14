@@ -15,6 +15,7 @@ Support seraph via paypal donations, thanks in advance !
     - No argument : next channel
     - number as argument : change channel to number (eg. ch (num))
     - `b` : previous channel (!= one channel back)
+    - `list` : list the number of channel in zone
 - __`dr` · `ㅇㄱ` · `ㅌㅌ` · `xx`__
   - Drop party/raid
 - __`exit`__
@@ -43,6 +44,8 @@ Support seraph via paypal donations, thanks in advance !
 ## Changelog
 <details>
 
+    2.03
+    - Added `ch list` to `cmd-channel`
     2.02
     - Updated for caali-proxy-nextgen
     2.01

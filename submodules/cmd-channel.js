@@ -7,15 +7,35 @@ class CommandChannel {
         this.channelPrev = 0;
         this.myZone = 0;
 
-        this.parent.cmd.add(['ch', '초'], (p) => {
-            if (!p) 
+        this.parent.cmd.add(['ch', '초'], {
+            '$none': () => {
                 this.changeChannel(this.channelCurr + 1);
-            else if (!isNaN(p)) 
-                this.changeChannel(p);
-            else if (p === 'b' || p === 'ㅠ') 
+            },
+            'b': () => {
                 this.changeChannel(this.channelPrev);
-            else 
-                this.send(`Invalid argument. usage : ch (num)`);
+            },
+            'ㅠ': () => {
+                this.changeChannel(this.channelPrev);
+            },
+            'list': () => {
+                if (this.channelCurr > 20)
+                    return;
+                this.parent.mod.send('C_LIST_CHANNEL', 1, {
+                    unk: 0,
+                    zone: this.myZone
+                });
+                this.parent.mod.hookOnce('S_LIST_CHANNEL', 1, (e) => {
+                    this.send(`This zone has ${e.channels.length} channel(s) in total.`);
+                    return false;
+                })
+            },
+            '$default': (num) => {
+                if (typeof num === 'number') {
+                    this.changeChannel(num);
+                } else {
+                    this.send(`Invalid argument. usage : ch [(num)|b|ㅠ|list]`);
+                }
+            }
         });
 
         this.installHooks();
