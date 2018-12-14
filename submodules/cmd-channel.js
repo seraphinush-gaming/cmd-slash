@@ -30,7 +30,7 @@ class CommandChannel {
                 })
             },
             '$default': (num) => {
-                if (typeof num === 'number') {
+                if (!isNaN(num)) {
                     this.changeChannel(num);
                 } else {
                     this.send(`Invalid argument. usage : ch [(num)|b|ㅠ|list]`);
@@ -61,7 +61,10 @@ class CommandChannel {
             }
         });
 
-        this.parent.mod.game.me.on('change_zone', (zone) => { this.myZone = zone; });
+        this.parent.mod.game.me.on('change_zone', (zone) => {
+            this.myZone = zone;
+            this.channelPrev = 0;
+        });
     }
 
     changeChannel(num) {
