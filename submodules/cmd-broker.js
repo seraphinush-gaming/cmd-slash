@@ -11,6 +11,7 @@ class CommandBroker {
     }
 
     destructor() {
+        this.parent.cmd.remove(['broker', '거래']);
         this.parent = undefined;
     }
 

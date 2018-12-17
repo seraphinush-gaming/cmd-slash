@@ -13,6 +13,7 @@ class CommandExit {
     }
 
     destructor() {
+        this.parent.cmd.remove(['exit']);
         this.parent = undefined;
     }
 

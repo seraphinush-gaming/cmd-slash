@@ -1,10 +1,13 @@
 {
-    "disableAutoUpdate": false,
-    "name": "cmd-slash",
     "author": "seraphinush",
     "description": "tera-proxy module compiled to use slash commands for common functions",
-    "version": "2.03.01",
+    "disableAutoUpdate": false,
+    "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B7QQJZV9L5P2J&source=url",
+    "name": "cmd-slash",
+    "options": {
+        "reloadable": false
+    },
     "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/"],
     "supportUrl": "https://github.com/seraphinush-gaming/cmd-slash/blob/master/README.md",
-    "donationUrl": "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=B7QQJZV9L5P2J&source=url"
+    "version": "2.03.02"
 }

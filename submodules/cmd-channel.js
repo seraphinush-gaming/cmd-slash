@@ -46,6 +46,7 @@ class CommandChannel {
         this.myZone - undefined;
         this.channelPrev = undefined;
         this.channelCurr = undefined;
+        this.parent.cmd.remove(['ch', '초']);
         this.parent = undefined;
     }
 
