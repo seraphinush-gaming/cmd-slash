@@ -24,7 +24,7 @@ class CommandSlash {
 	}
 
 	destructor() {
-        for(let submodule in this.submodules) {
+        for (let submodule in this.submodules) {
             this.submodules[submodule].destructor();
             delete this[submodule];
         }
