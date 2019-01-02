@@ -27,7 +27,7 @@ class CommandChannel {
                 this.parent.mod.hookOnce('S_LIST_CHANNEL', 1, (e) => {
                     this.send(`This zone has ${e.channels.length} channel(s) in total.`);
                     return false;
-                })
+                });
             },
             '$default': (num) => {
                 if (!isNaN(num)) {
@@ -43,10 +43,10 @@ class CommandChannel {
     }
 
     destructor() {
+        this.parent.cmd.remove(['ch', '초']);
         this.myZone - undefined;
         this.channelPrev = undefined;
         this.channelCurr = undefined;
-        this.parent.cmd.remove(['ch', '초']);
         this.parent = undefined;
     }
 

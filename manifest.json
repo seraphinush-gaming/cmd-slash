@@ -2,9 +2,9 @@
 	"files": {
 		"README.md": "795ee5b228a250634883d9f2486b4937d48c56c452c42f28f4d02d6224f68bc2",
 		"index.js": "962f6ba5bb407fb5b79150836b8c1882488e49106ff458852ed068d5d11a9805",
-		"module.json": "e639d770ee0b2c664ba5b77e2d150bcb5d1998abd2f2dc9dc8afff8d50821de9",
+		"module.json": "83840576f9097193b289fcb98e6a7d1351f479abe4bd758a7df9b5e866a9819a",
 		"submodules/cmd-broker.js": "84dc67f18b9042334d0c7f3da4a05172d4f084b70ff455d4cb0f4c424e1b6a5e",
-		"submodules/cmd-channel.js": "9925e6caf9b57df87e12d7aa3c03c209dbddd51d0fe6583a28e508e220e65835",
+		"submodules/cmd-channel.js": "585758d7669055d3828932163e20c627277a8c3b4c3e0fdea10bfdfbf1bdedc3",
 		"submodules/cmd-exit.js": "f165bae60152cf380f0d97256bb0b34f01d8180c4c0eda5dd3b158eeefc31b9e",
 		"submodules/cmd-general.js": "c21a8f0a6ad2add86932acea4e2f59713d8284d14004af75797fcd47115995cd",
 		"submodules/cmd-lobby.js": "72e8f28a442015bbb32864bf0fbd51062aea28f2cdb3c07732708492b24ffc0c"
