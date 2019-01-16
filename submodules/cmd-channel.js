@@ -82,11 +82,13 @@ class CommandChannel {
                 break;
         }
         num -= 1;
-        this.parent.mod.send('C_SELECT_CHANNEL', 1, {
+        let _ = this.parent.mod.trySend('C_SELECT_CHANNEL', 1, {
             unk: 1,
             zone: this.myZone,
             channel: num
         });
+        if (!_)
+            console.log('Unmapped protocol packet \<C_SELECT_CHANNEL\>.');
     }
 
     send(msg) { this.parent.cmd.message(': ' + msg); }
