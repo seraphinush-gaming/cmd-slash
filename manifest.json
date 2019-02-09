@@ -1,10 +1,10 @@
 {
 	"files": {
-		"README.md": "795ee5b228a250634883d9f2486b4937d48c56c452c42f28f4d02d6224f68bc2",
+		"README.md": "0009ab8bc63123930d45a00c4c1cfc2164cf72d484c685bbe61e9e814180fcf7",
 		"index.js": "c646ad826dc817fe604d6802ce8ac0ea19f4c369c3e1c2c6a29f39aa03fab2b5",
-		"module.json": "b7a116ddfbc611c0f0c9193aa7b4aab3f3fbd48f065b4b76cebe5a5c314dd6d5",
+		"module.json": "4be608d4ba674c792f84fea2d3f1766bd947ec1a1fc6a068f00ca07d44c6f4c2",
 		"submodules/cmd-broker.js": "84dc67f18b9042334d0c7f3da4a05172d4f084b70ff455d4cb0f4c424e1b6a5e",
-		"submodules/cmd-channel.js": "9e7a9f722d6f201f9c2d0caf1dbbd8cf557e5aabd1d65d53d635bb04145567cb",
+		"submodules/cmd-channel.js": "71dfc4eb96e9b7eee87be3aa88b2854ae6c9971c89bbf5a515aa36c0f729bab0",
 		"submodules/cmd-exit.js": "f165bae60152cf380f0d97256bb0b34f01d8180c4c0eda5dd3b158eeefc31b9e",
 		"submodules/cmd-general.js": "c21a8f0a6ad2add86932acea4e2f59713d8284d14004af75797fcd47115995cd",
 		"submodules/cmd-lobby.js": "72e8f28a442015bbb32864bf0fbd51062aea28f2cdb3c07732708492b24ffc0c"
@@ -19,6 +19,7 @@
 		"S_CURRENT_CHANNEL": 2,
 		"S_EXIT": 3,
 		"S_LIST_CHANNEL": 1,
+		"S_LOAD_TOPO": 3,
 		"S_NPC_MENU_SELECT": 1,
 		"S_PREPARE_EXIT": "raw",
 		"S_REQUEST_CONTRACT": 1

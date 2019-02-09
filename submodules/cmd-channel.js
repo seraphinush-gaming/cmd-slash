@@ -50,20 +50,20 @@ class CommandChannel {
         this.parent = undefined;
     }
 
-    installHook(name, version, cb) {
+    hook(name, version, cb) {
         this.parent.mod.hook(name, version, cb);
     }
 
     installHooks() {
-        this.installHook('S_CURRENT_CHANNEL', 2, (e) => {
+        this.hook('S_CURRENT_CHANNEL', 2, (e) => {
             if (this.channelCurr !== e.channel) {
                 this.channelPrev = this.channelCurr;
                 this.channelCurr = e.channel;
             }
         });
 
-        this.parent.mod.game.me.on('change_zone', (zone) => {
-            this.myZone = zone;
+        this.hook('S_LOAD_TOPO', 3, (e) => {
+            this.myZone = e.zone;
             this.channelPrev = 0;
         });
     }

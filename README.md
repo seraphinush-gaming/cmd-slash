@@ -5,7 +5,7 @@ Support seraph via paypal donations, thanks in advance !
 ```
 
 ## Auto-update guide
-- Create a folder called `cmd-slash` in `tera-proxy/mods` and download >> [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/module.json) << (right-click this link and save as..) into the folder
+- Create a folder called `cmd-slash` in `tera-proxy/mods` and download >> [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/module.json) << (right-click this link and save link as..) into the folder
 
 ## Usage
 - __`broker` · `거래`__
@@ -44,6 +44,8 @@ Support seraph via paypal donations, thanks in advance !
 ## Changelog
 <details>
 
+    2.04
+    - Removed `tera-game-state` usage
     2.03
     - Added `ch list` to `cmd-channel`
     2.02
