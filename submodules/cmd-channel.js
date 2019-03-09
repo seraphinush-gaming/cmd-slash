@@ -88,7 +88,7 @@ class CommandChannel {
             channel: num
         });
         if (!_)
-            console.log('Unmapped protocol packet \<C_SELECT_CHANNEL\>.');
+            this.send('Unmapped protocol packet &lt;C_SELECT_CHANNEL&gt;.');
     }
 
     send(msg) { this.parent.cmd.message(': ' + msg); }

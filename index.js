@@ -5,7 +5,8 @@ const path = require('path');
 
 class CommandSlash {
 
-	constructor(mod) {
+    constructor(mod)
+    {
 
 		this.mod = mod;
         this.cmd = mod.command || mod.require.command;
@@ -23,7 +24,8 @@ class CommandSlash {
 
 	}
 
-	destructor() {
+    destructor()
+    {
         for (let submodule in this.submodules) {
             this.submodules[submodule].destructor();
             delete this[submodule];
@@ -34,7 +36,8 @@ class CommandSlash {
         this.mod = undefined;
     }
 
-	initialize(submodules) {
+    initialize(submodules)
+    {
         if (typeof submodules === 'string') {
             submodules = [submodules];
         }

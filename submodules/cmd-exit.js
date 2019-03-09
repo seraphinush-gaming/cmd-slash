@@ -20,7 +20,7 @@ class CommandExit {
     installHook() {
         this.parent.mod.hook('S_PREPARE_EXIT', 'raw', () => {
             this.parent.mod.send('S_EXIT', 3, {});
-        }); 
+        });
     }
 
 }
