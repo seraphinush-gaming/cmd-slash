@@ -5,12 +5,11 @@ const path = require('path');
 
 class CommandSlash {
 
-    constructor(mod)
-    {
+    constructor(mod) {
 
-		this.mod = mod;
+        this.mod = mod;
         this.cmd = mod.command || mod.require.command;
-		this.submodules = {};
+        this.submodules = {};
 
         let list = [];
         if (fs.existsSync(path.join(__dirname, "submodules"))) {
@@ -22,10 +21,9 @@ class CommandSlash {
             this.initialize(list[i]);
         }
 
-	}
+    }
 
-    destructor()
-    {
+    destructor() {
         for (let submodule in this.submodules) {
             this.submodules[submodule].destructor();
             delete this[submodule];
@@ -36,8 +34,7 @@ class CommandSlash {
         this.mod = undefined;
     }
 
-    initialize(submodules)
-    {
+    initialize(submodules) {
         if (typeof submodules === 'string') {
             submodules = [submodules];
         }
@@ -59,5 +56,5 @@ class CommandSlash {
 }
 
 module.exports = function CommandSlashLoader(mod) {
-	return new CommandSlash(mod);
+    return new CommandSlash(mod);
 }

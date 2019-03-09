@@ -20,7 +20,7 @@ Support seraph via paypal donations, thanks in advance !
 - __`ch` · `초`__
   - Change channel
     - No argument : next channel
-    - number as argument : change channel to number (eg. `ch (num)`)
+    - Number as argument : change channel to number (eg. `ch (num)`)
     - `b` : previous channel (!= one channel back)
     - `list` : list the number of channel in zone
 - __`dr` · `ㅇㄱ` · `ㅌㅌ` · `xx`__
