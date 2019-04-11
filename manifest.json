@@ -1,14 +1,14 @@
 {
 	"files": {
-		"README.md": "65fcb62932d153f659a6daab47e787af4b4670ed633935d04f12a76fd7a1d427",
-		"index.js": "9445e0b1805e92b5b5a94e8f16e875d2d3fb4991a937d6415bf0c51fb191fd22",
-		"module.json": "41220a59f37430b6777f45d74ebfd96b384bb0efcc99ec38d15e1f4df5335b9c",
-		"submodules/cmd-ace.js": "fed3a555eae19e1ffbce849aba467dc8b159905ef204210df93f4ee142c64177",
-		"submodules/cmd-broker.js": "84dc67f18b9042334d0c7f3da4a05172d4f084b70ff455d4cb0f4c424e1b6a5e",
-		"submodules/cmd-channel.js": "5e4324e1db6959349880f43b8eb94a729bd41dc5c6f72f7f12e23ee78fd5ee2c",
-		"submodules/cmd-exit.js": "d3f615743a5f63ff149a8cec2055c832e6fac5546a052cea58cffa58a42464a9",
-		"submodules/cmd-general.js": "c21a8f0a6ad2add86932acea4e2f59713d8284d14004af75797fcd47115995cd",
-		"submodules/cmd-lobby.js": "72e8f28a442015bbb32864bf0fbd51062aea28f2cdb3c07732708492b24ffc0c"
+		"README.md": "6c820f4dffb18f1c9ddf02e0491a1c6de68a2a70c8f792858e414566d92778ff",
+		"index.js": "466019491c25931565e59f4af1c940ef596ea50c036aba99096a19dd21eb248b",
+		"module.json": "e833e28efded443d98a99b9c1cb9a988cde7bea806656237eca86cb48e58db8c",
+		"submodules/cmd-ace.js": "4da2f19c2ca98c60d85f52caaaf57866f97dde8d0b0d477aafa1d81387fc1b75",
+		"submodules/cmd-broker.js": "7ef4a00edca660c7f057704870b6982babce3940758d83b37bf289e7a8ac1563",
+		"submodules/cmd-channel.js": "1c37a3ee2a1ea3cfff5c63d3d75e2fde25f59ace3049e908a0a77a6cc980ab60",
+		"submodules/cmd-exit.js": "bac2cd806d468b2bc458dd093ea075eec898bf4dc1bda7658e8d589e48430211",
+		"submodules/cmd-general.js": "21cf73aef44176fed00be140e4cb113ef00cef0636c51fa982da42364197a445",
+		"submodules/cmd-lobby.js": "de4780505ae3655f03bcf7a498000a849509c5827de6a6c35dbece56172e0c40"
 	},
 	"defs": {
 		"C_DUNGEON_WORK_ENTER": 1,
@@ -24,6 +24,7 @@
 		"S_LOAD_TOPO": 3,
 		"S_NPC_MENU_SELECT": 1,
 		"S_PREPARE_EXIT": "raw",
-		"S_REQUEST_CONTRACT": 1
+		"S_REQUEST_CONTRACT": 1,
+		"S_SYSTEM_MESSAGE": 1
 	}
 }

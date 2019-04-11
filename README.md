@@ -9,11 +9,7 @@ Support seraph via paypal donations, thanks in advance !
 
 ## Usage
 - __`ace`__
-  - Enter Ace dungeon
-  - Number as argument : enter trial of number (eg. `ace 1`)
-    - `1` : Baracos' Trial
-    - `2` : Akasha's Trial
-    - `3` : Lilith's Trial
+  - Enter Ace dungeon, alternating between Baracos' Trial and Akasha's Trial
   - Time attack and hits taken count trial by default
 - __`broker` · `거래`__
   - Call broker UI

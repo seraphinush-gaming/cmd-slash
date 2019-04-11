@@ -1,19 +1,19 @@
 class CommandLobby {
 
-    constructor(parent) {
+  constructor(parent) {
 
-        this.parent = parent;
+    this.parent = parent;
 
-        this.parent.cmd.add(['lobby', '캐선'], () => {
-            this.parent.mod.send('C_RETURN_TO_LOBBY', 1, {});
-        });
+    this.parent.cmd.add(['lobby', '캐선'], () => {
+      this.parent.mod.send('C_RETURN_TO_LOBBY', 1, {});
+    });
 
-    }
+  }
 
-    destructor() {
-        this.parent.cmd.remove(['lobby', '캐선']);
-        this.parent = undefined;
-    }
+  destructor() {
+    this.parent.cmd.remove(['lobby', '캐선']);
+    this.parent = undefined;
+  }
 
 }
 
