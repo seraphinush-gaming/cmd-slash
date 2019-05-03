@@ -1,14 +1,14 @@
 {
 	"files": {
-		"README.md": "6c820f4dffb18f1c9ddf02e0491a1c6de68a2a70c8f792858e414566d92778ff",
+		"README.md": "7b73196fc1271114c553fb6d8e2875e9922245c170c9316ddeee11eefc394884",
 		"index.js": "466019491c25931565e59f4af1c940ef596ea50c036aba99096a19dd21eb248b",
-		"module.json": "e833e28efded443d98a99b9c1cb9a988cde7bea806656237eca86cb48e58db8c",
+		"module.json": "27e4c2826f98394796c54392206567b1086d092222ccb0de3eb65faadb3c1b1f",
 		"submodules/cmd-ace.js": "4da2f19c2ca98c60d85f52caaaf57866f97dde8d0b0d477aafa1d81387fc1b75",
 		"submodules/cmd-broker.js": "7ef4a00edca660c7f057704870b6982babce3940758d83b37bf289e7a8ac1563",
 		"submodules/cmd-channel.js": "1c37a3ee2a1ea3cfff5c63d3d75e2fde25f59ace3049e908a0a77a6cc980ab60",
 		"submodules/cmd-exit.js": "bac2cd806d468b2bc458dd093ea075eec898bf4dc1bda7658e8d589e48430211",
 		"submodules/cmd-general.js": "21cf73aef44176fed00be140e4cb113ef00cef0636c51fa982da42364197a445",
-		"submodules/cmd-lobby.js": "de4780505ae3655f03bcf7a498000a849509c5827de6a6c35dbece56172e0c40"
+		"submodules/cmd-lobby.js": "1f5a45e6623317e67b6f74e073bd85234e732fa9dc90961da23ced833d47ee16"
 	},
 	"defs": {
 		"C_DUNGEON_WORK_ENTER": 1,

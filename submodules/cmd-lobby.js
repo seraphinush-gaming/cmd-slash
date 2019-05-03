@@ -12,6 +12,7 @@ class CommandLobby {
 
   destructor() {
     this.parent.cmd.remove(['lobby', '캐선']);
+    
     this.parent = undefined;
   }
 
