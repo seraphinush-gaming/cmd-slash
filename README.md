@@ -33,17 +33,16 @@ Support seraph via paypal donations, thanks in advance !
   - Return to lobby
 - __`res` · `ㄱㄷㄴ` · `ㄹㄹ` · `ff`__
   - Reset dungeon
-- __`talent` · `특성`__
-  - Call talent UI
 
 ## Info
 - Code schematic based on [`tera-game-state`](https://github.com/caali-hackerman/tera-game-state)
 - Compiled modules :
+  - `cmd-ace`
   - `cmd-broker` (mod. by [wuaw](https://github.com/wuaw), branch [seraphinush-gaming](https://github.com/ylennia-archives/cmd-broker))
   - `cmd-channel` (mod. by [teralove](https://github.com/teralove), branch [seraphinush-gaming](https://github.com/ylennia-archives/cmd-channel))
   - `cmd-exit` (mod. by [teralove](https://github.com/teralove))
   - `exit-instantly (mod. by [teralove](https://github.com/teralove))
-  - `cmd-slash-kr` (mod. by [seraphinush-gaming](https://github.com/ylennia-archives/cmd-slash-kr))
+  - `cmd-general` (mod. by [seraphinush-gaming](https://github.com/ylennia-archives/cmd-slash-kr))
   - `cmd-lobby` (mod. by [teralove](https://github.com/teralove))
 - cmd-slash-kr : Dungeon reset is `/던전리셋`, which is `/ejswjsfltpt` on Korean keyboard
   - `res` in proxy chat or `/ejswjsfltpt` :thinking:
@@ -53,6 +52,8 @@ Support seraph via paypal donations, thanks in advance !
 ## Changelog
 <details>
 
+    2.06
+    - Removed `talent` option
     2.05
     - Added `cmd-ace`
     2.04

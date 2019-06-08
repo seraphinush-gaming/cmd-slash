@@ -1,13 +1,13 @@
 {
 	"files": {
-		"README.md": "e87ac5d76e6dbbd3b7ee4b50c09df103806a6840aa777c2fc873b7f838b25b58",
-		"index.js": "466019491c25931565e59f4af1c940ef596ea50c036aba99096a19dd21eb248b",
-		"module.json": "a01bf5ee93668b86b38b179d1f8d74cd329ff512185dbfef7b6dec5cfcd8c504",
-		"submodules/cmd-ace.js": "4da2f19c2ca98c60d85f52caaaf57866f97dde8d0b0d477aafa1d81387fc1b75",
+		"README.md": "0f41a3db005f88132313e6ffa424574e053f3bc473c84341b820d12fe44eb333",
+		"index.js": "53a9a86a343754359a20b794761cf5d8151fe33aebdb31f0fd96b1103bb44d00",
+		"module.json": "4d80107936ac3496c38fd3f7836a70e3fd1890152705e1150c00b0cf17a654aa",
+		"submodules/cmd-ace.js": "4e5ef6f81fce1aaeb70295c431375f2c4130b5abff2aa651021ee35be7705a18",
 		"submodules/cmd-broker.js": "7ef4a00edca660c7f057704870b6982babce3940758d83b37bf289e7a8ac1563",
-		"submodules/cmd-channel.js": "1c37a3ee2a1ea3cfff5c63d3d75e2fde25f59ace3049e908a0a77a6cc980ab60",
-		"submodules/cmd-exit.js": "bac2cd806d468b2bc458dd093ea075eec898bf4dc1bda7658e8d589e48430211",
-		"submodules/cmd-general.js": "21cf73aef44176fed00be140e4cb113ef00cef0636c51fa982da42364197a445",
+		"submodules/cmd-channel.js": "aad6a674869cf4e80a464343f83181e8cac05c3a1791cf3109f00d0a0752f70b",
+		"submodules/cmd-exit.js": "47a7a8a1c4ca5f5c537fd1abc7bad744039a9e007f5ddc7d4fe50f6aabc1ce02",
+		"submodules/cmd-general.js": "151486b083474dba72d368a7cfac725fbf6ba8a47f0424ada23018624d6033e1",
 		"submodules/cmd-lobby.js": "1f5a45e6623317e67b6f74e073bd85234e732fa9dc90961da23ced833d47ee16"
 	},
 	"defs": {
@@ -24,7 +24,6 @@
 		"S_LOAD_TOPO": 3,
 		"S_NPC_MENU_SELECT": 1,
 		"S_PREPARE_EXIT": "raw",
-		"S_REQUEST_CONTRACT": 1,
 		"S_SYSTEM_MESSAGE": 1
 	}
 }

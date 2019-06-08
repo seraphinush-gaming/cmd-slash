@@ -8,8 +8,6 @@ class CommandAce {
 
     this.parent.cmd.add(['ace'], () => {
       switch (this.myZone) {
-        case 0:
-          break;
         case 9031:
           this.goToAceDungeon(9032);
           break;
@@ -21,21 +19,7 @@ class CommandAce {
       }
     });
 
-    this.parent.mod.hook('S_LOAD_TOPO', 3, (e) => {
-      this.myZone = e.zone;
-    });
-
-    this.parent.mod.hook('S_SYSTEM_MESSAGE', 1, (e) => {
-      if (this.myZone !== 9031 && this.myZone !== 9032) {
-        return;
-      }
-
-      let msg = this.parent.mod.parseSystemMessage(e.message).id;
-
-      if (msg === 'SMT_CANT_ENTER_DUNGEON_COUNT_LIMIT') {
-        this.parent.mod.send('C_RESET_ALL_DUNGEON', 1, {});
-      }
-    });
+    this.load();
 
   }
 
@@ -60,6 +44,24 @@ class CommandAce {
     });
     if (!_)
       this.send('Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.');
+  }
+
+  load() {
+    this.parent.mod.hook('S_LOAD_TOPO', 3, (e) => {
+      this.myZone = e.zone;
+    });
+
+    this.parent.mod.hook('S_SYSTEM_MESSAGE', 1, (e) => {
+      if (this.myZone !== 9031 && this.myZone !== 9032) {
+        return;
+      }
+
+      let msg = this.parent.mod.parseSystemMessage(e.message).id;
+
+      if (msg === 'SMT_CANT_ENTER_DUNGEON_COUNT_LIMIT') {
+        this.parent.mod.send('C_RESET_ALL_DUNGEON', 1, {});
+      }
+    });
   }
 
   send(msg) {

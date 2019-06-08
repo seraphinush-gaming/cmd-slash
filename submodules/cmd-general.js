@@ -16,17 +16,11 @@ class CommandGeneral {
       this.send(`Dungeons reset.`);
     });
 
-    // call talent ui
-    this.parent.cmd.add(['talent', '특성'], () => {
-      this.parent.mod.send('S_REQUEST_CONTRACT', 1, { type: 77 });
-    });
-
   }
 
   destructor() {
     this.parent.cmd.remove(['dr', 'ㅇㄱ', 'ㅌㅌ', 'xx']);
     this.parent.cmd.remove(['res', 'ㄱㄷㄴ', 'ㄹㄹ', 'ff']);
-    this.parent.cmd.remove(['talent', '특성']);
 
     this.parent = undefined;
   }

@@ -8,7 +8,7 @@ class CommandExit {
       this.parent.mod.send('C_EXIT', 1, {});
     });
 
-    this.installHook();
+    this.load();
 
   }
 
@@ -18,7 +18,7 @@ class CommandExit {
     this.parent = undefined;
   }
 
-  installHook() {
+  load() {
     this.parent.mod.hook('S_PREPARE_EXIT', 'raw', () => {
       this.parent.mod.send('S_EXIT', 3, {});
     });

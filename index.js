@@ -45,11 +45,13 @@ class CommandSlash {
           let req = require(`./submodules/${submodule}`);
           this.submodules[submodule] = new req(this);
           this[submodule] = this.submodules[submodule];
+
+          console.log(`.. Loaded submodule [${submodule}]`);
         }
         catch (e) {
           delete this[submodule];
 
-          this.mod.log(`\n[cmd-slash] : Unable to load submodule [${submodule}] .. \n - ${e}\n`);
+          console.log(`[cmd-slash] : Unable to load submodule [${submodule}] .. \n - ${e}\n`);
         }
       }
     }

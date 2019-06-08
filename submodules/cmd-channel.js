@@ -3,6 +3,7 @@ class CommandChannel {
   constructor(parent) {
 
     this.parent = parent;
+
     this.channelCurr = 0;
     this.channelPrev = 0;
     this.myZone = 0;
@@ -38,37 +39,17 @@ class CommandChannel {
       }
     });
 
-    this.installHooks();
+    this.load();
 
   }
 
   destructor() {
-    this.parent.mod.unhook('S_CURRENT_CHANNEL');
-
     this.parent.cmd.remove(['ch', '초']);
 
     this.myZone - undefined;
     this.channelPrev = undefined;
     this.channelCurr = undefined;
     this.parent = undefined;
-  }
-
-  hook(name, version, cb) {
-    this.parent.mod.hook(name, version, cb);
-  }
-
-  installHooks() {
-    this.hook('S_CURRENT_CHANNEL', 2, (e) => {
-      if (this.channelCurr !== e.channel) {
-        this.channelPrev = this.channelCurr;
-        this.channelCurr = e.channel;
-      }
-    });
-
-    this.hook('S_LOAD_TOPO', 3, (e) => {
-      this.myZone = e.zone;
-      this.channelPrev = 0;
-    });
   }
 
   changeChannel(num) {
@@ -93,6 +74,24 @@ class CommandChannel {
     });
     if (!_)
       this.send('Unmapped protocol packet &lt;C_SELECT_CHANNEL&gt;.');
+  }
+
+  hook(name, version, cb) {
+    this.parent.mod.hook(name, version, cb);
+  }
+
+  load() {
+    this.hook('S_CURRENT_CHANNEL', 2, (e) => {
+      if (this.channelCurr !== e.channel) {
+        this.channelPrev = this.channelCurr;
+        this.channelCurr = e.channel;
+      }
+    });
+
+    this.hook('S_LOAD_TOPO', 3, (e) => {
+      this.myZone = e.zone;
+      this.channelPrev = 0;
+    });
   }
 
   send(msg) { this.parent.cmd.message(': ' + msg); }
