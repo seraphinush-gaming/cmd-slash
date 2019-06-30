@@ -26,7 +26,7 @@ class CommandChannel {
           zone: this.myZone
         });
         this.parent.mod.hookOnce('S_LIST_CHANNEL', 1, (e) => {
-          this.send(`This zone has ${e.channels.length} channel(s) in total.`);
+          this.parent.send(`This zone has ${e.channels.length} channel(s) in total.`);
           return false;
         });
       },
@@ -34,7 +34,7 @@ class CommandChannel {
         if (!isNaN(num)) {
           this.changeChannel(num);
         } else {
-          this.send(`Invalid argument. usage : ch [(num)|b|ㅠ|list]`);
+          this.parent.send(`Invalid argument. usage : ch [(num)|b|ㅠ|list]`);
         }
       }
     });
@@ -61,7 +61,7 @@ class CommandChannel {
         num = 10;
         break;
       case (this.channelCurr):
-        this.send(`Same channel selected.`);
+        this.parent.send(`Same channel selected.`);
         break;
       default:
         break;
@@ -73,7 +73,7 @@ class CommandChannel {
       channel: num
     });
     if (!_)
-      this.send('Unmapped protocol packet &lt;C_SELECT_CHANNEL&gt;.');
+      this.parent.send('Unmapped protocol packet &lt;C_SELECT_CHANNEL&gt;.');
   }
 
   hook(name, version, cb) {
@@ -93,8 +93,6 @@ class CommandChannel {
       this.channelPrev = 0;
     });
   }
-
-  send(msg) { this.parent.cmd.message(': ' + msg); }
 
 }
 

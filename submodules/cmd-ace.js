@@ -43,7 +43,7 @@ class CommandAce {
       challenge2: 2
     });
     if (!_)
-      this.send('Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.');
+      this.parent.send('Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.');
   }
 
   load() {
@@ -62,10 +62,6 @@ class CommandAce {
         this.parent.mod.send('C_RESET_ALL_DUNGEON', 1, {});
       }
     });
-  }
-
-  send(msg) {
-    this.parent.cmd.message(': ' + msg);
   }
 
 }

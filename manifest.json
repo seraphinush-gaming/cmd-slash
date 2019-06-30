@@ -1,13 +1,13 @@
 {
 	"files": {
 		"README.md": "0f41a3db005f88132313e6ffa424574e053f3bc473c84341b820d12fe44eb333",
-		"index.js": "53a9a86a343754359a20b794761cf5d8151fe33aebdb31f0fd96b1103bb44d00",
-		"module.json": "4d80107936ac3496c38fd3f7836a70e3fd1890152705e1150c00b0cf17a654aa",
-		"submodules/cmd-ace.js": "4e5ef6f81fce1aaeb70295c431375f2c4130b5abff2aa651021ee35be7705a18",
+		"index.js": "60339c9ef622dc853f1ab4c4fd004131e6e8672068ed82883be2aa7fc3b8081e",
+		"module.json": "d93ec02535b75ba86cca335312de7fe19832971d2091e0dbf7904d329a78cb1f",
+		"submodules/cmd-ace.js": "bae2162ae3a3f29583999a1d08b20bb28fcb3b6a8c5c62dbf50917001ada4690",
 		"submodules/cmd-broker.js": "7ef4a00edca660c7f057704870b6982babce3940758d83b37bf289e7a8ac1563",
-		"submodules/cmd-channel.js": "aad6a674869cf4e80a464343f83181e8cac05c3a1791cf3109f00d0a0752f70b",
+		"submodules/cmd-channel.js": "3d5d057014d8a214650caa40270e9beb2caf856e6e0054735a1d0e595362173a",
 		"submodules/cmd-exit.js": "47a7a8a1c4ca5f5c537fd1abc7bad744039a9e007f5ddc7d4fe50f6aabc1ce02",
-		"submodules/cmd-general.js": "151486b083474dba72d368a7cfac725fbf6ba8a47f0424ada23018624d6033e1",
+		"submodules/cmd-general.js": "ebb251bea5605dc9ccf1c09a785ad875d0cf4f221e57d8017a3f348f2f3dd6dc",
 		"submodules/cmd-lobby.js": "1f5a45e6623317e67b6f74e073bd85234e732fa9dc90961da23ced833d47ee16"
 	},
 	"defs": {
