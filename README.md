@@ -29,7 +29,7 @@ Support seraph via paypal donations, thanks in advance !
   - Drop party/raid
 - __`exit`__
   - Quit TERA
-- __`lobby` · `캐선`__
+- __`lobby` · `로비`__
   - Return to lobby
 - __`res` · `ㄱㄷㄴ` · `ㄹㄹ` · `ff`__
   - Reset dungeon
