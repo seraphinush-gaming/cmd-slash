@@ -41,7 +41,7 @@ Support seraph via paypal donations, thanks in advance !
   - `cmd-broker` (mod. by [wuaw](https://github.com/wuaw), branch [seraphinush-gaming](https://github.com/ylennia-archives/cmd-broker))
   - `cmd-channel` (mod. by [teralove](https://github.com/teralove), branch [seraphinush-gaming](https://github.com/ylennia-archives/cmd-channel))
   - `cmd-exit` (mod. by [teralove](https://github.com/teralove))
-  - `exit-instantly (mod. by [teralove](https://github.com/teralove))
+  - `exit-instantly` (mod. by [teralove](https://github.com/teralove))
   - `cmd-general` (mod. by [seraphinush-gaming](https://github.com/ylennia-archives/cmd-slash-kr))
   - `cmd-lobby` (mod. by [teralove](https://github.com/teralove))
 - cmd-slash-kr : Dungeon reset is `/던전리셋`, which is `/ejswjsfltpt` on Korean keyboard
