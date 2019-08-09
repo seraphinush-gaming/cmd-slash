@@ -52,6 +52,9 @@ Support seraph via paypal donations, thanks in advance !
 ## Changelog
 <details>
 
+    2.07
+    - Reinstated `tera-game-state`
+    - Added hot-reload support
     2.06
     - Removed `talent` option
     2.05

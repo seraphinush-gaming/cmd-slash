@@ -11,6 +11,8 @@ class CommandSlash {
     this.cmd = mod.command;
     this.submodules = {};
 
+    this.myZone = 0;
+
     let list = [];
     if (fs.existsSync(path.join(__dirname, "submodules"))) {
       list = fs.readdirSync(path.join(__dirname, "submodules"));
@@ -21,6 +23,11 @@ class CommandSlash {
       this.initialize(list[i]);
     }
 
+    // game state
+    this.mod.game.me.on('change_zone', (zone, quick) => {
+      this.myZone = zone;
+    });
+
   }
 
   destructor() {
@@ -28,6 +35,8 @@ class CommandSlash {
       this.submodules[submodule].destructor();
       delete this[submodule];
     }
+
+    this.myZone = undefined;
 
     this.submodules = undefined;
     this.cmd = undefined;
@@ -59,8 +68,16 @@ class CommandSlash {
 
   send() { this.cmd.message(': ' + [...arguments].join('\n\t - ')); }
 
+  // reload
+  saveState() {
+    let state = this.myZone;
+    return state;
+  }
+
+  loadState(state) {
+    this.myZone = state;
+  }  
+
 }
 
-module.exports = function CommandSlashLoader(mod) {
-  return new CommandSlash(mod);
-}
+module.exports = CommandSlash;

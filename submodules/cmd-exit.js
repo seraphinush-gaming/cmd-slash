@@ -4,11 +4,15 @@ class CommandExit {
 
     this.parent = parent;
 
+    // command
     this.parent.cmd.add(['exit'], () => {
       this.parent.mod.send('C_EXIT', 1, {});
     });
 
-    this.load();
+    // code
+    this.parent.mod.hook('S_PREPARE_EXIT', 'raw', () => {
+      this.parent.mod.send('S_EXIT', 3, {});
+    });
 
   }
 
@@ -16,12 +20,6 @@ class CommandExit {
     this.parent.cmd.remove(['exit']);
 
     this.parent = undefined;
-  }
-
-  load() {
-    this.parent.mod.hook('S_PREPARE_EXIT', 'raw', () => {
-      this.parent.mod.send('S_EXIT', 3, {});
-    });
   }
 
 }
