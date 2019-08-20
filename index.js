@@ -8,6 +8,7 @@ class CommandSlash {
   constructor(mod) {
 
     this.mod = mod;
+    this.game = mod.game;
     this.cmd = mod.command;
     this.submodules = {};
 
@@ -24,7 +25,7 @@ class CommandSlash {
     }
 
     // game state
-    this.mod.game.me.on('change_zone', (zone, quick) => {
+    this.game.me.on('change_zone', (zone) => {
       this.myZone = zone;
     });
 
@@ -39,6 +40,7 @@ class CommandSlash {
     this.myZone = undefined;
 
     this.submodules = undefined;
+    this.game = undefined;
     this.cmd = undefined;
     this.mod = undefined;
   }

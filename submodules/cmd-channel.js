@@ -19,16 +19,16 @@ class CommandChannel {
         this.changeChannel(this.channelPrev);
       },
       'list': () => {
-        if (this.channelCurr > 20)
-          return;
-        this.parent.mod.send('C_LIST_CHANNEL', 1, {
-          unk: 0,
-          zone: this.parent.myZone
-        });
-        this.parent.mod.hookOnce('S_LIST_CHANNEL', 1, (e) => {
-          this.parent.send(`This zone has ${e.channels.length} channel(s) in total.`);
-          return false;
-        });
+        if (this.channelCurr < 20) {
+          this.parent.mod.send('C_LIST_CHANNEL', 1, {
+            unk: 0,
+            zone: this.parent.myZone
+          });
+          this.parent.mod.hookOnce('S_LIST_CHANNEL', 1, (e) => {
+            this.parent.send(`This zone has ${e.channels.length} channel(s) in total.`);
+            return false;
+          });
+        }
       },
       '$default': (num) => {
         num = parseInt(num);
