@@ -59,6 +59,7 @@ class CommandChannel {
     this.parent = undefined;
   }
 
+  // helper
   changeChannel(num) {
     if (this.channelCurr <= 20) {
       num -= 1;
