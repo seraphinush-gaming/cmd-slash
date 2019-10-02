@@ -8,14 +8,11 @@ class CommandChannel {
     this.channelPrev = 0;
 
     // command
-    this.parent.cmd.add(['ch', '초'], {
+    this.parent.cmd.add(['ch'], {
       '$none': () => {
         this.changeChannel(this.channelCurr + 1);
       },
       'b': () => {
-        this.changeChannel(this.channelPrev);
-      },
-      'ㅠ': () => {
         this.changeChannel(this.channelPrev);
       },
       'list': () => {

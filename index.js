@@ -72,8 +72,7 @@ class CommandSlash {
 
   // reload
   saveState() {
-    let state = this.myZone;
-    return state;
+    return this.myZone;
   }
 
   loadState(state) {
