@@ -8,7 +8,7 @@ class CommandChannel {
     this.channelPrev = 0;
 
     // command
-    this.parent.cmd.add(['ch'], {
+    this.parent.cmd.add(['ch', '채널'], {
       '$none': () => {
         this.changeChannel(this.channelCurr + 1);
       },
@@ -48,7 +48,7 @@ class CommandChannel {
   }
 
   destructor() {
-    this.parent.cmd.remove(['ch', '초']);
+    this.parent.cmd.remove(['ch', '채널']);
 
     this.channelPrev = undefined;
     this.channelCurr = undefined;

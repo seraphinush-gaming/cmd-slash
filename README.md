@@ -19,7 +19,7 @@ Support seraph via paypal donations, thanks in advance !
   - Time attack and hits taken count trial by default
 - __`broker` · `거래`__
   - Call broker UI
-- __`ch` · `초`__
+- __`ch` · `채널`__
   - Change channel
     - No argument : next channel
     - Number as argument : change channel to number (eg. `ch (num)`)
