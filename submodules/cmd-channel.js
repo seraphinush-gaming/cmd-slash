@@ -1,75 +1,65 @@
-class CommandChannel {
+class command_channel {
 
   constructor(parent) {
 
     this.parent = parent;
 
-    this.channelCurr = 0;
-    this.channelPrev = 0;
+    this.ch_cur = 0;
+    this.ch_pre = 0;
 
     // command
-    this.parent.cmd.add(['ch', '채널'], {
+    this.parent.c.add(['ch', '채널'], {
       '$none': () => {
-        this.changeChannel(this.channelCurr + 1);
+        this.change_ch(this.ch_cur + 1);
       },
       'b': () => {
-        this.changeChannel(this.channelPrev);
+        this.change_ch(this.ch_pre);
       },
       'list': () => {
-        if (this.channelCurr < 20) {
-          this.parent.mod.send('C_LIST_CHANNEL', 1, {
+        if (this.ch_cur < 20) {
+          this.parent.m.send('C_LIST_CHANNEL', 1, {
             unk: 0,
-            zone: this.parent.myZone
+            zone: this.parent.zone
           });
-          this.parent.mod.hookOnce('S_LIST_CHANNEL', 1, (e) => {
+          this.parent.m.hookOnce('S_LIST_CHANNEL', 1, (e) => {
             this.parent.send(`This zone has ${e.channels.length} channel(s) in total.`);
             return false;
           });
         }
       },
-      '$default': (num) => {
-        num = parseInt(num);
-        if (!isNaN(num)) {
-          this.changeChannel(num);
-        } else {
-          this.parent.send(`Invalid argument. usage : ch [(num)|b|ㅠ|list]`);
-        }
+      '$default': (n) => {
+        n = parseInt(n);
+        !isNaN(n) ? this.change_ch(n) : this.parent.send(`Invalid argument. usage : ch [&lt;num&gt;|b|ㅠ|list]`);
       }
     });
 
     // code
-    this.parent.mod.hook('S_CURRENT_CHANNEL', 2, (e) => {
-      if (this.channelCurr !== e.channel) {
-        this.channelPrev = this.channelCurr;
-        this.channelCurr = e.channel;
+    this.parent.m.hook('S_CURRENT_CHANNEL', 2, (e) => {
+      if (this.ch_cur !== e.channel) {
+        this.ch_pre = this.ch_cur;
+        this.ch_cur = e.channel;
       }
     });
 
   }
 
   destructor() {
-    this.parent.cmd.remove(['ch', '채널']);
-
-    this.channelPrev = undefined;
-    this.channelCurr = undefined;
-
-    this.parent = undefined;
+    this.parent.c.remove(['ch', '채널']);
   }
 
   // helper
-  changeChannel(num) {
-    if (this.channelCurr <= 20) {
-      num -= 1;
-      let _ = this.parent.mod.trySend('C_SELECT_CHANNEL', 1, {
+  change_ch(n) {
+    if (this.ch_cur <= 20) {
+      n -= 1;
+      let _ = this.parent.m.trySend('C_SELECT_CHANNEL', 1, {
         unk: 1,
-        zone: this.parent.myZone,
-        channel: num
+        zone: this.parent.zone,
+        channel: n
       });
-      if (!_)
-        this.parent.send('Unmapped protocol packet &lt;C_SELECT_CHANNEL&gt;.');
+      !_ ? this.parent.send(`Unmapped protocol packet &lt;C_SELECT_CHANNEL&gt;.`) : null;
     }
   }
 
 }
 
-module.exports = CommandChannel;
+module.exports = command_channel;

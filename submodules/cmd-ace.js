@@ -1,46 +1,43 @@
-class CommandAce {
+const AKASHA = 9031;
+const BARACOS = 9032;
+
+class command_ace {
 
   constructor(parent) {
 
     this.parent = parent;
 
     // command
-    this.parent.cmd.add(['ace', 'ㅁㅊㄷ', '시험'], () => {
-      switch (this.parent.myZone) {
-        case 9031:
-          this.goToAceDungeon(9032);
-          break;
-        case 9032:
-          this.goToAceDungeon(9031);
-          break;
-        default:
-          this.goToAceDungeon(9032);
+    this.parent.c.add(['ace', 'ㅁㅊㄷ', '시험'], (arg) => {
+      if (arg) {
+        if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA);
+        else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS);
+      } else {
+        if (this.parent.zone == AKASHA) this.enter_ace_dungeon(BARACOS);
+        else if (this.parent.zone == BARACOS) this.enter_ace_dungeon(AKASHA);
+        else this.enter_ace_dungeon(BARACOS);
       }
     });
 
     // code
-    this.parent.mod.hook('S_SYSTEM_MESSAGE', 1, (e) => {
-      if (this.parent.myZone !== 9031 && this.parent.myZone !== 9032) {
+    this.parent.m.hook('S_SYSTEM_MESSAGE', 1, { order: 10 }, (e) => {
+      if (this.parent.zone !== AKASHA && this.parent.zone !== BARACOS)
         return;
-      }
 
-      let msg = this.parent.mod.parseSystemMessage(e.message).id;
-      if (msg === 'SMT_CANT_ENTER_DUNGEON_COUNT_LIMIT') {
-        this.parent.mod.send('C_RESET_ALL_DUNGEON', 1, {});
-      }
+      let msg = this.parent.m.parseSystemMessage(e.message).id;
+      if (msg === 'SMT_CANT_ENTER_DUNGEON_COUNT_LIMIT')
+        this.parent.m.send('C_RESET_ALL_DUNGEON', 1, {});
     });
 
   }
 
   destructor() {
-    this.parent.cmd.remove(['ace', 'ㅁㅊㄷ', '시험']);
-
-    this.parent = undefined;
+    this.parent.c.remove(['ace', 'ㅁㅊㄷ', '시험']);
   }
 
   // helper
-  goToAceDungeon(zone) {
-    let _ = this.parent.mod.trySend('C_DUNGEON_WORK_ENTER', 1, {
+  enter_ace_dungeon(zone) {
+    let _ = this.parent.m.trySend('C_DUNGEON_WORK_ENTER', 1, {
       count: 2,
       unk1: 13,
       zone: zone,
@@ -51,10 +48,9 @@ class CommandAce {
       unk4: 21,
       challenge2: 2
     });
-    if (!_)
-      this.parent.send('Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.');
+    !_ ? this.parent.send('Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.') : null;
   }
 
 }
 
-module.exports = CommandAce;
+module.exports = command_ace;

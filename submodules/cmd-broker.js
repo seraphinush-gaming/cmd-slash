@@ -1,21 +1,19 @@
-class CommandBroker {
+class command_broker {
 
   constructor(parent) {
 
     this.parent = parent;
 
-    this.parent.cmd.add(['broker', '거래'], () => {
-      this.parent.mod.send('S_NPC_MENU_SELECT', 1, { type: 28 });
+    this.parent.c.add(['broker', '거래'], () => {
+      this.parent.m.send('S_NPC_MENU_SELECT', 1, { type: 28 });
     });
 
   }
 
   destructor() {
-    this.parent.cmd.remove(['broker', '거래']);
-
-    this.parent = undefined;
+    this.parent.c.remove(['broker', '거래']);
   }
 
 }
 
-module.exports = CommandBroker;
+module.exports = command_broker;

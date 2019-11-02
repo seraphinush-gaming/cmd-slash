@@ -1,27 +1,25 @@
-class CommandExit {
+class command_exit {
 
   constructor(parent) {
 
     this.parent = parent;
 
     // command
-    this.parent.cmd.add(['exit'], () => {
-      this.parent.mod.send('C_EXIT', 1, {});
+    this.parent.c.add(['exit'], () => {
+      this.parent.m.send('C_EXIT', 1, {});
     });
 
     // code
-    this.parent.mod.hook('S_PREPARE_EXIT', 'raw', () => {
-      this.parent.mod.send('S_EXIT', 3, {});
+    this.parent.m.hook('S_PREPARE_EXIT', 'raw', () => {
+      this.parent.m.send('S_EXIT', 3, {});
     });
 
   }
 
   destructor() {
-    this.parent.cmd.remove(['exit']);
-
-    this.parent = undefined;
+    this.parent.c.remove(['exit']);
   }
 
 }
 
-module.exports = CommandExit;
+module.exports = command_exit;

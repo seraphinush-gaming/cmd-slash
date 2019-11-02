@@ -1,14 +1,14 @@
 {
 	"files": {
 		"README.md": "4d33c58a59bec19920f3da6e8b63de34601f407656aa9ca30668bb6f1a4efb23",
-		"index.js": "e07707115ea75e5785dfbf76366aa25510b15c4dee4bddea9de7a54cbe8a77cc",
-		"module.json": "3eddb7c741fc9307011f0831e487b0517d9dd05f0b59733140a84b762e3b1f3b",
-		"submodules/cmd-ace.js": "0dcf6c8a1270f405e7b047af1c0ea09afcf38e47fd7fd6cac825acec75bec59d",
-		"submodules/cmd-broker.js": "7ef4a00edca660c7f057704870b6982babce3940758d83b37bf289e7a8ac1563",
-		"submodules/cmd-channel.js": "e836cd04a83b666e9dab53267b8c82901648b44860ecc8f1701946d6f1f79520",
-		"submodules/cmd-exit.js": "8f56cc131ac346919dfdd3168997a605a53c63094b4d79749f2d9d856ffed2ba",
-		"submodules/cmd-general.js": "ebb251bea5605dc9ccf1c09a785ad875d0cf4f221e57d8017a3f348f2f3dd6dc",
-		"submodules/cmd-lobby.js": "83de010d79142ed6e368e3472562149cc90eaf6cb3b6bc1261fdca384d17b7af"
+		"index.js": "3d12fa229754c222bbedbf790f7e85ab8fb9a6e8e9c3a3239fe731cd673b56a3",
+		"module.json": "6d9e76fa4c1537f32ca5455af1421a5c4695b5535353e8ebd6fd14455685039e",
+		"submodules/cmd-ace.js": "28740be7be869ea7e95d59aac527a8c1b10e73bc69c894326a01c4b2291dad81",
+		"submodules/cmd-broker.js": "657618f10999017b24f53aa9cb0bd309381601afe10187b477d3d33791c0408f",
+		"submodules/cmd-channel.js": "8d14784d391e7680214e768d6fb99db20b1436f29af9bf892eb4c0c54fe58a9d",
+		"submodules/cmd-exit.js": "0cd80138a16133f13468bd0b972b834accf9eca2da29a9a01af99bcb6081959d",
+		"submodules/cmd-general.js": "0a9d578c72230c8b4ce7e7b5441f9f21814ea3970d1468c8a1ab6e328b7afd49",
+		"submodules/cmd-lobby.js": "241e53c707aa17f02ca375b17818510534631e3cd54693dd3a74c819a08f96e9"
 	},
 	"defs": {
 		"C_DUNGEON_WORK_ENTER": 1,
