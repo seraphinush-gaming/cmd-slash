@@ -14,15 +14,17 @@ Support seraph via paypal donations, thanks in advance !
 - Create a folder called `cmd-slash` in `tera-toolbox/mods` and download >> [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/module.json) << (right-click this link and save link as..) into the folder
 
 ## Usage
-- __`ace`__
-  - Enter Ace dungeon, alternating between Baracos' Trial and Akasha's Trial
+- __`ace` · `ㅁㅊㄷ` · `시험`__
+  - No argument : alternate between Baracos' Trial and Akasha's Trial
+  - `a` · `akasha` : enter Akasha's Trial
+  - `b` · `baracos` : enter Baracos' Trial
   - Time attack and hits taken count trial by default
 - __`broker` · `거래`__
   - Call broker UI
 - __`ch` · `채널`__
   - Change channel
     - No argument : next channel
-    - Number as argument : change channel to number (eg. `ch (num)`)
+    - Number as argument : change channel to number (eg. `ch <num>`)
     - `b` : previous channel (!= one channel back)
     - `list` : list the number of channel in zone
 - __`dr` · `ㅇㄱ` · `ㅌㅌ` · `xx`__

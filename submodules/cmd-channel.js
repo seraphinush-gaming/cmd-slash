@@ -1,4 +1,6 @@
-class command_channel {
+'use strict';
+
+class cmd_channel {
 
   constructor(parent) {
 
@@ -62,4 +64,4 @@ class command_channel {
 
 }
 
-module.exports = command_channel;
+module.exports = cmd_channel;

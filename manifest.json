@@ -1,14 +1,14 @@
 {
 	"files": {
-		"README.md": "4d33c58a59bec19920f3da6e8b63de34601f407656aa9ca30668bb6f1a4efb23",
+		"README.md": "140cc23397742e361ff807daa30a33686f578ee3475d5588cf7032b09ce7ce02",
 		"index.js": "3d12fa229754c222bbedbf790f7e85ab8fb9a6e8e9c3a3239fe731cd673b56a3",
-		"module.json": "6d9e76fa4c1537f32ca5455af1421a5c4695b5535353e8ebd6fd14455685039e",
-		"submodules/cmd-ace.js": "28740be7be869ea7e95d59aac527a8c1b10e73bc69c894326a01c4b2291dad81",
-		"submodules/cmd-broker.js": "657618f10999017b24f53aa9cb0bd309381601afe10187b477d3d33791c0408f",
-		"submodules/cmd-channel.js": "8d14784d391e7680214e768d6fb99db20b1436f29af9bf892eb4c0c54fe58a9d",
-		"submodules/cmd-exit.js": "0cd80138a16133f13468bd0b972b834accf9eca2da29a9a01af99bcb6081959d",
-		"submodules/cmd-general.js": "0a9d578c72230c8b4ce7e7b5441f9f21814ea3970d1468c8a1ab6e328b7afd49",
-		"submodules/cmd-lobby.js": "241e53c707aa17f02ca375b17818510534631e3cd54693dd3a74c819a08f96e9"
+		"module.json": "2f152c2a81c70765e60f50433f0d5389a3ea759c758e6d5fea1f94f2f07ff45c",
+		"submodules/cmd-ace.js": "876704f7b7a1c6b50182438707ceb1c9363522cb37f471bbb3d29d3fce9469e4",
+		"submodules/cmd-broker.js": "8deba7877ab4105db4f3d0a2a3263b3ab4bfe28340ecb952d8f204190473273f",
+		"submodules/cmd-channel.js": "3351ff015a2b90cf71d189f988fd0c7d268aa6f9168067cf374ab06035bb80b9",
+		"submodules/cmd-exit.js": "e2ebf6407f4d5986e8325ae46095b09d1d7d592c264b7b3f53b9fb5a7c9c5735",
+		"submodules/cmd-general.js": "3fa214ce9346a95ae634e038a371b7caa4df280f3c424c25a575b86e448f76d8",
+		"submodules/cmd-lobby.js": "c8f222b3d913670b4c7d8732a56400a762aa0358e6a2ce9baa0d6dc683ff4b66"
 	},
 	"defs": {
 		"C_DUNGEON_WORK_ENTER": 1,
@@ -22,7 +22,6 @@
 		"S_EXIT": 3,
 		"S_LIST_CHANNEL": 1,
 		"S_NPC_MENU_SELECT": 1,
-		"S_PREPARE_EXIT": "raw",
 		"S_SYSTEM_MESSAGE": 1
 	}
 }

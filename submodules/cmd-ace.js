@@ -1,21 +1,24 @@
+'use strict';
+
 const AKASHA = 9031;
 const BARACOS = 9032;
 
-class command_ace {
+class cmd_ace {
 
   constructor(parent) {
 
     this.parent = parent;
 
     // command
-    this.parent.c.add(['ace', 'ㅁㅊㄷ', '시험'], (arg) => {
-      if (arg) {
-        if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA);
-        else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS);
-      } else {
+    this.parent.c.add(['ace', 'ㅁㅊㄷ', '시험'], {
+      '$none': () => {
         if (this.parent.zone == AKASHA) this.enter_ace_dungeon(BARACOS);
         else if (this.parent.zone == BARACOS) this.enter_ace_dungeon(AKASHA);
         else this.enter_ace_dungeon(BARACOS);
+      },
+      '$default': (arg) => {
+        if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA);
+        else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS);
       }
     });
 
@@ -53,4 +56,4 @@ class command_ace {
 
 }
 
-module.exports = command_ace;
+module.exports = cmd_ace;

@@ -1,4 +1,6 @@
-class command_general {
+'use strict';
+
+class cmd_general {
 
   constructor(parent) {
 
@@ -25,4 +27,4 @@ class command_general {
 
 }
 
-module.exports = command_general;
+module.exports = cmd_general;
