@@ -12,6 +12,7 @@ class command_slash {
     this.g = mod.game;
     this.submodules = {};
 
+    // initialize
     this.zone = 0;
 
     let list = [];
@@ -62,7 +63,7 @@ class command_slash {
     }
   }
 
-  send() { this.c.message(': ' + [...arguments].join('\n\t - ')); }
+  send() { this.c.message(': ' + [...arguments].join('\n - ')); }
 
   // reload
   saveState() {

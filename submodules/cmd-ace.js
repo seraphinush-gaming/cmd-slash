@@ -51,7 +51,7 @@ class cmd_ace {
       unk4: 21,
       challenge2: 2
     });
-    !_ ? this.parent.send('Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.') : null;
+    !_ ? this.parent.send(`Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.`) : null;
   }
 
 }

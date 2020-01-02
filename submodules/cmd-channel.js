@@ -19,13 +19,13 @@ class cmd_channel {
       },
       'list': () => {
         if (this.ch_cur < 20) {
-          this.parent.m.send('C_LIST_CHANNEL', 1, {
-            unk: 0,
-            zone: this.parent.zone
-          });
           this.parent.m.hookOnce('S_LIST_CHANNEL', 1, (e) => {
             this.parent.send(`This zone has ${e.channels.length} channel(s) in total.`);
             return false;
+          });
+          this.parent.m.send('C_LIST_CHANNEL', 1, {
+            unk: 0,
+            zone: this.parent.zone
           });
         }
       },
