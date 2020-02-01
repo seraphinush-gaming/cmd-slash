@@ -2,7 +2,7 @@
 	"files": {
 		"README.md": "140cc23397742e361ff807daa30a33686f578ee3475d5588cf7032b09ce7ce02",
 		"index.js": "fdd22c671dd070a799fea360e5d80607dd0cbf5bdb6f2ef7834eba350f4e4dc7",
-		"module.json": "9b284a2fa66d23deefb72d19a485b8a9d309e0ec1f014e0f99ed6a78022c6f26",
+		"module.json": "a40e773cbda011119dea5ab39471b3e384b93a94896362ea1225ede57dbd4f8d",
 		"submodules/cmd-ace.js": "dca688184d8eb35435265672d3cb634bef2a1dff08079ad31ef7021e28b1d24f",
 		"submodules/cmd-broker.js": "8deba7877ab4105db4f3d0a2a3263b3ab4bfe28340ecb952d8f204190473273f",
 		"submodules/cmd-channel.js": "5756b981a2f976b4d3f07c8a9237f2830223dc7eb7cb317c440424c461972b6c",
@@ -22,6 +22,7 @@
 		"S_EXIT": 3,
 		"S_LIST_CHANNEL": 1,
 		"S_NPC_MENU_SELECT": 1,
+		"S_PREPARE_EXIT": "event",
 		"S_SYSTEM_MESSAGE": 1
 	}
 }
