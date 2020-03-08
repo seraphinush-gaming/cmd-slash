@@ -2,6 +2,7 @@
 
 const AKASHA = 9031;
 const BARACOS = 9032;
+const LILITH = 3016;
 
 class cmd_ace {
 
@@ -12,13 +13,16 @@ class cmd_ace {
     // command
     this.parent.c.add(['ace', 'ㅁㅊㄷ', '시험'], {
       '$none': () => {
-        if (this.parent.zone == AKASHA) this.enter_ace_dungeon(BARACOS);
+        if (this.parent.zone == AKASHA) 
+          this.parent.m.majorPatchVersion > 92 ? this.enter_ace_dungeon(LILITH) : this.enter_ace_dungeon(BARACOS);
         else if (this.parent.zone == BARACOS) this.enter_ace_dungeon(AKASHA);
+        else if (this.parent.zone == LILITH) this.enter_ace_dungeon(BARACOS);
         else this.enter_ace_dungeon(BARACOS);
       },
       '$default': (arg) => {
         if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA);
         else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS);
+        else if (arg == 'l' || arg == 'lilith') this.enter_ace_dungeon(LILITH);
       }
     });
 

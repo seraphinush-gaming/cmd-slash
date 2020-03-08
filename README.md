@@ -15,9 +15,10 @@ Support seraph via paypal donations, thanks in advance !
 
 ## Usage
 - __`ace` · `ㅁㅊㄷ` · `시험`__
-  - No argument : alternate between Baracos' Trial and Akasha's Trial
+  - No argument : loop Baracos' Trial > Akasha's Trial > Lilith's Trial > ..
   - `a` · `akasha` : enter Akasha's Trial
   - `b` · `baracos` : enter Baracos' Trial
+  - `l` · `lilith` : enter Lilith's Trial
   - Time attack and hits taken count trial by default
 - __`broker` · `거래`__
   - Call broker UI
@@ -46,14 +47,15 @@ Support seraph via paypal donations, thanks in advance !
   - `exit-instantly` (mod. by [teralove](https://github.com/teralove))
   - `cmd-general` (mod. by [seraphinush-gaming](https://github.com/ylennia-archives/cmd-slash-kr))
   - `cmd-lobby` (mod. by [teralove](https://github.com/teralove))
-- cmd-slash-kr : Dungeon reset is `/던전리셋`, which is `/ejswjsfltpt` on Korean keyboard
-  - `res` in proxy chat or `/ejswjsfltpt` :thinking:
+- cmd-slash-kr : Dungeon reset is `/던전리셋`, on Korean keyboard which is `/ejswjsfltpt`
 - cmd-channel : "Changing channels while inside a dungeon will teleport you out"
 - cmd-channel : "Changing to a channel number that doesn't exist will send you to channel 1"
 
 ## Changelog
 <details>
 
+    2.08
+    - Added Lilith's Trial support for `ace` option
     2.07
     - Reinstated `tera-game-state`
     - Added hot-reload support
