@@ -14,7 +14,7 @@ class cmd_ace {
     this.parent.c.add(['ace', 'ㅁㅊㄷ', '시험'], {
       '$none': () => {
         if (this.parent.zone == AKASHA) 
-          this.parent.m.majorPatchVersion > 92 ? this.enter_ace_dungeon(LILITH) : this.enter_ace_dungeon(BARACOS);
+          this.parent.m.majorPatchVersion >= 92 ? this.enter_ace_dungeon(LILITH) : this.enter_ace_dungeon(BARACOS);
         else if (this.parent.zone == BARACOS) this.enter_ace_dungeon(AKASHA);
         else if (this.parent.zone == LILITH) this.enter_ace_dungeon(BARACOS);
         else this.enter_ace_dungeon(BARACOS);
@@ -28,7 +28,7 @@ class cmd_ace {
 
     // code
     this.parent.m.hook('S_SYSTEM_MESSAGE', 1, { order: 10 }, (e) => {
-      if (this.parent.zone !== AKASHA && this.parent.zone !== BARACOS)
+      if (this.parent.zone !== AKASHA && this.parent.zone !== BARACOS && this.parent.zone !== LILITH)
         return;
 
       let msg = this.parent.m.parseSystemMessage(e.message).id;

@@ -2,8 +2,8 @@
 	"files": {
 		"README.md": "7729ce37898b2b9cba478e41ab2459448ad511b2176cc40db0e15e731857b733",
 		"index.js": "fdd22c671dd070a799fea360e5d80607dd0cbf5bdb6f2ef7834eba350f4e4dc7",
-		"module.json": "5ddd4f7b6d1d8985c9803cb506bb11c1b8416adde644287f1ba8005b87fefc87",
-		"submodules/cmd-ace.js": "a955a5e1070b8949a33d2b9c6b0df750fb54afd96a879c73953f7397fe20f325",
+		"module.json": "e01484395a7b35569e2ae3f4ad34b2715c7bf4c9585ca1a6ba7bdbb8e8af51e1",
+		"submodules/cmd-ace.js": "802a09992a0c3d5fa5a77edc5d45529d04414f57dbd6f98d5bbfdef923cd7311",
 		"submodules/cmd-broker.js": "8deba7877ab4105db4f3d0a2a3263b3ab4bfe28340ecb952d8f204190473273f",
 		"submodules/cmd-channel.js": "5756b981a2f976b4d3f07c8a9237f2830223dc7eb7cb317c440424c461972b6c",
 		"submodules/cmd-drop.js": "382f10c85dc31b5f532a546d50395c1869f8cf08a9ca24146ced138a3553fbdf",
