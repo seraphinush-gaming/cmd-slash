@@ -4,16 +4,17 @@ class cmd_broker {
 
   constructor(parent) {
 
-    this.parent = parent;
+    this.command = parent.mod.command;
 
-    this.parent.c.add(['broker', '거래'], () => {
-      this.parent.m.send('S_NPC_MENU_SELECT', 1, { type: 28 });
+    // command
+    parent.mod.command.add(['broker', '거래'], () => {
+      parent.mod.send('S_NPC_MENU_SELECT', 1, { type: 28 });
     });
 
   }
 
   destructor() {
-    this.parent.c.remove(['broker', '거래']);
+    this.command.remove(['broker', '거래']);
   }
 
 }

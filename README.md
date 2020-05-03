@@ -1,5 +1,5 @@
 <p align="center">
-<a href="#">
+<a href="https://discord.gg/dUNDDtw">
 <img src="https://github.com/seraphinush-gaming/pastebin/blob/master/logo_ttb_trans.png?raw=true" width="200" height="200" alt="tera-toolbox, logo by Foglio" />
 </a>
 </p>
@@ -22,12 +22,6 @@ Support seraph via paypal donations, thanks in advance !
   - Time attack and hits taken count trial by default
 - __`broker` · `거래`__
   - Call broker UI
-- __`ch` · `채널`__
-  - Change channel
-    - No argument : next channel
-    - Number as argument : change channel to number (eg. `ch <num>`)
-    - `b` : previous channel (!= one channel back)
-    - `list` : list the number of channel in zone
 - __`dr` · `ㅇㄱ` · `ㅌㅌ` · `xx`__
   - Drop party/raid
 - __`exit`__
@@ -42,18 +36,17 @@ Support seraph via paypal donations, thanks in advance !
 - Compiled modules :
   - `cmd-ace`
   - `cmd-broker` (mod. by [wuaw](https://github.com/wuaw), branch [seraphinush-gaming](https://github.com/ylennia-archives/cmd-broker))
-  - `cmd-channel` (mod. by [teralove](https://github.com/teralove), branch [seraphinush-gaming](https://github.com/ylennia-archives/cmd-channel))
   - `cmd-exit` (mod. by [teralove](https://github.com/teralove))
   - `exit-instantly` (mod. by [teralove](https://github.com/teralove))
   - `cmd-general` (mod. by [seraphinush-gaming](https://github.com/ylennia-archives/cmd-slash-kr))
   - `cmd-lobby` (mod. by [teralove](https://github.com/teralove))
 - cmd-slash-kr : Dungeon reset is `/던전리셋`, on Korean keyboard which is `/ejswjsfltpt`
-- cmd-channel : "Changing channels while inside a dungeon will teleport you out"
-- cmd-channel : "Changing to a channel number that doesn't exist will send you to channel 1"
 
 ## Changelog
 <details>
 
+    2.09
+    - Removed `cmd-channel`
     2.08
     - Added Lilith's Trial support for `ace` option
     2.07

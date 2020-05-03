@@ -4,17 +4,17 @@ class cmd_reset {
 
   constructor(parent) {
 
-    this.parent = parent;
+    this.command = parent.mod.command;
 
-    this.parent.c.add(['res', 'ㄱㄷㄴ', 'ㄹㄹ', 'ff'], () => {
-      this.parent.m.send('C_RESET_ALL_DUNGEON', 1, {});
-      this.parent.send(`Dungeons reset.`);
+    // command
+    parent.mod.command.add(['res', 'ㄱㄷㄴ', 'ㄹㄹ', 'ff'], () => {
+      parent.mod.send('C_RESET_ALL_DUNGEON', 1, {});
     });
 
   }
 
   destructor() {
-    this.parent.c.remove(['res', 'ㄱㄷㄴ', 'ㄹㄹ', 'ff']);
+    this.command.remove(['res', 'ㄱㄷㄴ', 'ㄹㄹ', 'ff']);
   }
 
 }

@@ -4,16 +4,17 @@ class cmd_lobby {
 
   constructor(parent) {
 
-    this.parent = parent;
+    this.command = parent.mod.command;
 
-    this.parent.c.add(['lobby', '로비'], () => {
-      this.parent.m.send('C_RETURN_TO_LOBBY', 1, {});
+    // command
+    parent.mod.command.add(['lobby', '로비'], () => {
+      parent.mod.send('C_RETURN_TO_LOBBY', 1, {});
     });
 
   }
 
   destructor() {
-    this.parent.c.remove(['lobby', '로비']);
+    this.command.remove(['lobby', '로비']);
   }
 
 }

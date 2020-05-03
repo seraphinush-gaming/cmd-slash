@@ -1,29 +1,13 @@
 {
-	"files": {
-		"README.md": "7729ce37898b2b9cba478e41ab2459448ad511b2176cc40db0e15e731857b733",
-		"index.js": "fdd22c671dd070a799fea360e5d80607dd0cbf5bdb6f2ef7834eba350f4e4dc7",
-		"module.json": "e01484395a7b35569e2ae3f4ad34b2715c7bf4c9585ca1a6ba7bdbb8e8af51e1",
-		"submodules/cmd-ace.js": "802a09992a0c3d5fa5a77edc5d45529d04414f57dbd6f98d5bbfdef923cd7311",
-		"submodules/cmd-broker.js": "8deba7877ab4105db4f3d0a2a3263b3ab4bfe28340ecb952d8f204190473273f",
-		"submodules/cmd-channel.js": "5756b981a2f976b4d3f07c8a9237f2830223dc7eb7cb317c440424c461972b6c",
-		"submodules/cmd-drop.js": "382f10c85dc31b5f532a546d50395c1869f8cf08a9ca24146ced138a3553fbdf",
-		"submodules/cmd-exit.js": "e2ebf6407f4d5986e8325ae46095b09d1d7d592c264b7b3f53b9fb5a7c9c5735",
-		"submodules/cmd-lobby.js": "c8f222b3d913670b4c7d8732a56400a762aa0358e6a2ce9baa0d6dc683ff4b66",
-		"submodules/cmd-reset.js": "49a4b15164ef4d50b39cd685c0bc48b143a129532b7653e48773832bc77482ce"
-	},
-	"defs": {
-		"C_DUNGEON_WORK_ENTER": 1,
-		"C_EXIT": 1,
-		"C_LEAVE_PARTY": 1,
-		"C_LIST_CHANNEL": 1,
-		"C_RESET_ALL_DUNGEON": 1,
-		"C_RETURN_TO_LOBBY": 1,
-		"C_SELECT_CHANNEL": 1,
-		"S_CURRENT_CHANNEL": 2,
-		"S_EXIT": 3,
-		"S_LIST_CHANNEL": 1,
-		"S_NPC_MENU_SELECT": 1,
-		"S_PREPARE_EXIT": "event",
-		"S_SYSTEM_MESSAGE": 1
-	}
+  "files": {
+    "README.md": "7ab8bceb4f0bd7054f61f49f28d5fa8c44b46aec733caa6d44a68c75536a745a",
+    "index.js": "1f0d362dbe44fa8600a6389b81e81a04b21335aac3582258ddd6f04daeb82b69",
+    "module.json": "8aea2124ce292b18c286982da87fe299de70e899163c8b6f5e81f4f703568ce4",
+    "submodules/cmd-ace.js": "1b4928a7bfba4e65db78fa559c06d13f135f7c7657f8f97641b82e0a0492993d",
+    "submodules/cmd-broker.js": "b106b2cd52aa47d4a900ae7eb5319fe8fc1b7675e58129f845f44c3c998721a2",
+    "submodules/cmd-drop.js": "10a321820d53ba4bd0855d96a466721701f1f918433d43217e10a3989cb278b6",
+    "submodules/cmd-exit.js": "ddb90a9fc9e64b0e50d785192d9f4541ff62738ba5c1755b05cbabb7b3ff0518",
+    "submodules/cmd-lobby.js": "ab1adbf7e5dfb6640096ea93edef513135fd9a14c6c4ad4980d637b17aa12c0f",
+    "submodules/cmd-reset.js": "62ccd0f9c5744e1f65efc01d3fea329e9aeb24ad61d7f9c95a2399dcc5fa7d42"
+  }
 }

@@ -4,16 +4,17 @@ class cmd_drop {
 
   constructor(parent) {
 
-    this.parent = parent;
+    this.command = parent.mod.command;
 
-    this.parent.c.add(['dr', 'ㅇㄱ', 'ㅌㅌ', 'xx'], () => {
-      this.parent.m.send('C_LEAVE_PARTY', 1, {});
-      this.parent.send(`Dropped party.`);
+    // command
+    parent.mod.command.add(['dr', 'ㅇㄱ', 'ㅌㅌ', 'xx'], () => {
+      parent.mod.send('C_LEAVE_PARTY', 1, {});
     });
+
   }
 
   destructor() {
-    this.parent.c.remove(['dr', 'ㅇㄱ', 'ㅌㅌ', 'xx']);
+    this.command.remove(['dr', 'ㅇㄱ', 'ㅌㅌ', 'xx']);
   }
 
 }

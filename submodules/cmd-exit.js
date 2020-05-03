@@ -4,22 +4,22 @@ class cmd_exit {
 
   constructor(parent) {
 
-    this.parent = parent;
+    this.command = parent.mod.command;
 
     // command
-    this.parent.c.add('exit', () => {
-      this.parent.m.send('C_EXIT', 1, {});
+    parent.mod.command.add('exit', () => {
+      parent.mod.send('C_EXIT', 1, {});
     });
 
     // code
-    this.parent.m.hook('S_PREPARE_EXIT', 'event', () => {
-      this.parent.m.send('S_EXIT', 3, {});
+    parent.mod.hook('S_PREPARE_EXIT', 'event', () => {
+      parent.mod.send('S_EXIT', 3, {});
     });
 
   }
 
   destructor() {
-    this.parent.c.remove('exit');
+    this.command.remove('exit');
   }
 
 }

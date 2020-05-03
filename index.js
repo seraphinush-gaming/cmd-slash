@@ -7,28 +7,19 @@ class command_slash {
 
   constructor(mod) {
 
-    this.m = mod;
-    this.c = mod.command;
-    this.g = mod.game;
+    this.mod = mod;
     this.submodules = {};
-
-    // initialize
-    this.zone = 0;
 
     let list = [];
     if (fs.existsSync(path.join(__dirname, "submodules"))) {
       list = fs.readdirSync(path.join(__dirname, "submodules"));
-    } else {
-      fs.mkdirSync(path.join(__dirname, "submodules"));
-    }
-    for (let i = 0, n = list.length; i < n; i++) {
-      this.initialize(list[i]);
-    }
 
-    // game state
-    this.g.me.on('change_zone', (zone) => {
-      this.zone = zone;
-    });
+      for (let i = 0, n = list.length; i < n; i++) {
+        this.init(list[i]);
+      }
+    } else {
+      mod.warn(`Unable to find any submodules.`);
+    }
 
   }
 
@@ -37,11 +28,11 @@ class command_slash {
       this.submodules[submodule].destructor();
       delete this[submodule];
 
-      this.m.log(`.. Unloaded submodule [${submodule}]`);
+      this.mod.log(`.. Unloaded submodule [${submodule}]`);
     }
   }
 
-  initialize(submodules) {
+  init(submodules) {
     if (typeof submodules === 'string') {
       submodules = [submodules];
     }
@@ -53,26 +44,22 @@ class command_slash {
           this.submodules[submodule] = new req(this);
           this[submodule] = this.submodules[submodule];
 
-          this.m.log(`.. Loaded submodule [${submodule}]`);
+          this.mod.log(`.. Loaded submodule [${submodule}]`);
         }
         catch (e) {
           delete this[submodule];
-          this.m.warn(`Unable to load submodule [${submodule}] .. \n - ${e}\n`);
+          this.mod.warn(`Unable to load submodule [${submodule}] .. \n - ${e}\n`);
         }
       }
     }
   }
 
-  send() { this.c.message(': ' + [...arguments].join('\n - ')); }
+  send(msg) { this.mod.command.message(': ' + msg); }
 
   // reload
-  saveState() {
-    return this.zone;
-  }
+  saveState() { }
 
-  loadState(state) {
-    this.zone = state;
-  }  
+  loadState() { }
 
 }
 
