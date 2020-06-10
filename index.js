@@ -10,9 +10,8 @@ class command_slash {
     this.mod = mod;
     this.submodules = {};
 
-    let list = [];
     if (fs.existsSync(path.join(__dirname, "submodules"))) {
-      list = fs.readdirSync(path.join(__dirname, "submodules"));
+      let list = fs.readdirSync(path.join(__dirname, "submodules"));
 
       for (let i = 0, n = list.length; i < n; i++) {
         this.init(list[i]);
