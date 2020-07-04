@@ -55,11 +55,6 @@ class command_slash {
 
   send(msg) { this.mod.command.message(': ' + msg); }
 
-  // reload
-  saveState() { }
-
-  loadState() { }
-
 }
 
 module.exports = command_slash;
