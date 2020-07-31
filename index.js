@@ -57,4 +57,4 @@ class command_slash {
 
 }
 
-module.exports = command_slash;
+module.exports = { NetworkMod: command_slash };
