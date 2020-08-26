@@ -28,7 +28,7 @@ class cmd_ace {
 
     // code
     parent.mod.hook('S_SYSTEM_MESSAGE', 1, { order: 10 }, (e) => {
-      if (parent.mod.game.me.zone !== AKASHA && parent.mod.game.me.zone !== BARACOS && parent.mod.game.me.zone !== LILITH)
+      if (![AKASHA, BARACOS, LILITH].includes(parent.mod.game.me.zone))
         return;
 
       let msg = parent.mod.parseSystemMessage(e.message).id;
