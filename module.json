@@ -1,6 +1,6 @@
 {
   "author": "seraphinush",
-  "conflicts": ["broker-anywhere","broker-command","cmd-broker","command-broker","cmd-channel","command-channel","channel-command","cmd-slash-kr","cmd-general","exit-command","drop-party","exit-instantly"],
+  "conflicts": ["broker-anywhere","broker-command","cmd-broker","command-broker","cmd-slash-kr","cmd-general","exit-command","drop-party","exit-instantly"],
   "description": "tera-toolbox module compilation to use slash commands for common functions",
   "disableAutoUpdate": false,
   "donationUrl": "https://www.paypal.me/seraphinush",
@@ -10,5 +10,5 @@
   },
   "servers": ["https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/"],
   "supportUrl": "https://github.com/seraphinush-gaming/cmd-slash/blob/master/README.md",
-  "version": "2.09.05.v99.02"
+  "version": "2.09.06.v99.02"
 }
