@@ -1,24 +1,13 @@
 {
-	"files": {
-		"README.md": "3dab2975921f0600c24c89f1dfecd8cc840d33298665a0176afb8f65231667d0",
-		"index.js": "4dd437e24b86518f2a0e9bc8fd967ae3e54dd530ef10f7b66a04b16c4c27d287",
-		"module.json": "c929e39f4544d98bfaf1448bdbd93b615845303536fd4a6ec692291f2ea31d06",
-		"submodules/cmd-ace.js": "5ebccef4184991ebe7ad305ef976ff8be6ce4bb0fd6e6a8717203438c91bbf20",
-		"submodules/cmd-broker.js": "b106b2cd52aa47d4a900ae7eb5319fe8fc1b7675e58129f845f44c3c998721a2",
-		"submodules/cmd-drop.js": "10a321820d53ba4bd0855d96a466721701f1f918433d43217e10a3989cb278b6",
-		"submodules/cmd-exit.js": "ddb90a9fc9e64b0e50d785192d9f4541ff62738ba5c1755b05cbabb7b3ff0518",
-		"submodules/cmd-lobby.js": "ab1adbf7e5dfb6640096ea93edef513135fd9a14c6c4ad4980d637b17aa12c0f",
-		"submodules/cmd-reset.js": "62ccd0f9c5744e1f65efc01d3fea329e9aeb24ad61d7f9c95a2399dcc5fa7d42"
-	},
-	"defs": {
-		"C_DUNGEON_WORK_ENTER": 1,
-		"C_EXIT": 1,
-		"C_LEAVE_PARTY": 1,
-		"C_RESET_ALL_DUNGEON": 1,
-		"C_RETURN_TO_LOBBY": 1,
-		"S_EXIT": 3,
-		"S_NPC_MENU_SELECT": 1,
-		"S_PREPARE_EXIT": "event",
-		"S_SYSTEM_MESSAGE": 1
-	}
+  "files": {
+    "README.md": "3dab2975921f0600c24c89f1dfecd8cc840d33298665a0176afb8f65231667d0",
+    "index.js": "4dd437e24b86518f2a0e9bc8fd967ae3e54dd530ef10f7b66a04b16c4c27d287",
+    "module.json": "1ba7a74346478c27adfbadd7b36e1374d18a920e00c48b7f0bd737c73285a1c4",
+    "submodules/cmd-ace.js": "5ebccef4184991ebe7ad305ef976ff8be6ce4bb0fd6e6a8717203438c91bbf20",
+    "submodules/cmd-broker.js": "b106b2cd52aa47d4a900ae7eb5319fe8fc1b7675e58129f845f44c3c998721a2",
+    "submodules/cmd-drop.js": "10a321820d53ba4bd0855d96a466721701f1f918433d43217e10a3989cb278b6",
+    "submodules/cmd-exit.js": "ddb90a9fc9e64b0e50d785192d9f4541ff62738ba5c1755b05cbabb7b3ff0518",
+    "submodules/cmd-lobby.js": "ab1adbf7e5dfb6640096ea93edef513135fd9a14c6c4ad4980d637b17aa12c0f",
+    "submodules/cmd-reset.js": "62ccd0f9c5744e1f65efc01d3fea329e9aeb24ad61d7f9c95a2399dcc5fa7d42"
+  }
 }
