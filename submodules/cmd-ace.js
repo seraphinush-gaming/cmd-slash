@@ -45,7 +45,7 @@ class cmd_ace {
   }
 
   // helper
-  enter_ace_dungeon(zone, challenge_one = 1, challenge_2 = 2) {
+  enter_ace_dungeon(zone, a = 1, b = 2) {
     let res = this.parent.mod.trySend('C_DUNGEON_WORK_ENTER', 1, {
       count: 2,
       unk1: 13,
@@ -53,9 +53,9 @@ class cmd_ace {
       random: 0,
       unk2: 13,
       unk3: 21,
-      challenge1: challenge_one,
+      challenge1: a,
       unk4: 21,
-      challenge2: challenge_2
+      challenge2: b
     });
     !res ? this.parent.send(`Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.`) : null;
   }
