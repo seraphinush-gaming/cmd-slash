@@ -3,6 +3,7 @@
 const AKASHA = 9031;
 const BARACOS = 9032;
 const LILITH = 3016;
+const CATALEPTICON = 3040;
 
 class cmd_ace {
 
@@ -14,15 +15,16 @@ class cmd_ace {
     // command
     parent.mod.command.add(['ace', 'ㅁㅊㄷ', '시험'], {
       '$none': () => {
-        if (parent.mod.game.me.zone == AKASHA) this.enter_ace_dungeon(LILITH)
-        else if (parent.mod.game.me.zone == BARACOS) this.enter_ace_dungeon(AKASHA);
-        else if (parent.mod.game.me.zone == LILITH) this.enter_ace_dungeon(BARACOS);
-        else this.enter_ace_dungeon(BARACOS);
+        if (parent.mod.game.me.zone == AKASHA) this.enter_ace_dungeon(LILITH, 1, 2)
+        else if (parent.mod.game.me.zone == BARACOS) this.enter_ace_dungeon(AKASHA, 1, 2);
+        else if (parent.mod.game.me.zone == LILITH) this.enter_ace_dungeon(BARACOS, 1, 2);
+        else this.enter_ace_dungeon(BARACOS, 1, 2);
       },
       '$default': (arg) => {
-        if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA);
-        else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS);
-        else if (arg == 'l' || arg == 'lilith') this.enter_ace_dungeon(LILITH);
+        if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA, 1, 2);
+        else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS, 1, 2);
+        else if (arg == 'l' || arg == 'lilith') this.enter_ace_dungeon(LILITH, 1, 2);
+        else if (arg == 'c' || arg == 'catalepticon') this.enter_ace_dungeon(CATALEPTICON, 1, 2);
       }
     });
 
@@ -43,7 +45,7 @@ class cmd_ace {
   }
 
   // helper
-  enter_ace_dungeon(zone) {
+  enter_ace_dungeon(zone, challenge_one = 1, challenge_2 = 2) {
     let res = this.parent.mod.trySend('C_DUNGEON_WORK_ENTER', 1, {
       count: 2,
       unk1: 13,
@@ -51,9 +53,9 @@ class cmd_ace {
       random: 0,
       unk2: 13,
       unk3: 21,
-      challenge1: 1,
+      challenge1: challenge_one,
       unk4: 21,
-      challenge2: 2
+      challenge2: challenge_2
     });
     !res ? this.parent.send(`Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.`) : null;
   }

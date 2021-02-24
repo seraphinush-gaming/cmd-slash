@@ -2,7 +2,7 @@
 Support seraph via paypal donations, thanks in advance !
 ```
 
-# cmd-slash [![](https://img.shields.io/badge/paypal-donate-333333.svg?colorA=0070BA&colorB=333333)](https://www.paypal.me/seraphinush)
+# cmd-slash [![](https://img.shields.io/badge/paypal-donate-333333.svg?colorA=0070BA&colorB=333333)](https://www.paypal.me/seraphinush) [![](https://img.shields.io/badge/patreon-pledge-333333.svg?colorA=F96854&colorB=333333)](https://www.patreon.com/seraphinush)
 tera-toolbox module compilation to use slash commands for common functions
 
 ## Auto-update guide
@@ -10,9 +10,11 @@ tera-toolbox module compilation to use slash commands for common functions
 
 ## Usage
 - __`ace` · `ㅁㅊㄷ` · `시험`__
-  - No argument : loop Baracos' Trial > Akasha's Trial > Lilith's Trial > ..
+  - No argument : rotates through Baracos' Trial > Akasha's Trial > Lilith's Trial > ..
+    - Rotation does not include Lumikan's Trial
   - `a` · `akasha` : enter Akasha's Trial
   - `b` · `baracos` : enter Baracos' Trial
+  - `c` · `catalepticon` : enter Lumikan's Trial
   - `l` · `lilith` : enter Lilith's Trial
   - Time attack and hits taken count trial by default
 - __`broker` · `거래`__
@@ -40,6 +42,8 @@ tera-toolbox module compilation to use slash commands for common functions
 ## Changelog
 <details>
 
+    2.0a
+    - Added Lumikan's Trial support for `ace` option
     2.09
     - Removed `cmd-channel`
     2.08
