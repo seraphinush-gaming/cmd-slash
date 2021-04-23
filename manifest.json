@@ -1,12 +1,12 @@
 {
   "files": {
-    "README.md": "6ab7afaf99d0d12a8a338dc1321662423df2661723d43a2bbf03b1d3d0616b11",
+    "README.md": "02d86c046c93a43016e7fd8d3a78c1dee9b446c9f3dea7e2e50fffe3041d236d",
     "index.js": "4dd437e24b86518f2a0e9bc8fd967ae3e54dd530ef10f7b66a04b16c4c27d287",
-    "module.json": "ed8de147313194c989c3e6da54746b1993abdbafc8927faae1653143d749b03c",
-    "submodules/cmd-ace.js": "9b2da1945c8630532dcf0eef05f409e14bdf21fe2cad85f37e292bd6c2d964a9",
-    "submodules/cmd-broker.js": "b106b2cd52aa47d4a900ae7eb5319fe8fc1b7675e58129f845f44c3c998721a2",
+    "module.json": "f331bba1a43ebf414a6c83e323b20ab4659360bd10e9ab9d4361d25c558a2745",
+    "submodules/cmd-ace.js": "eb5ccd3223bd30ee24e39b356ac00c0499469d6c74f31f8ce76af75c9218fbec",
+    "submodules/cmd-broker.js": "ce39f4c2add5eda2ae8c93688e8f2ba5b0b64719f2cccd84be851a341ec5a458",
     "submodules/cmd-drop.js": "10a321820d53ba4bd0855d96a466721701f1f918433d43217e10a3989cb278b6",
-    "submodules/cmd-exit.js": "ddb90a9fc9e64b0e50d785192d9f4541ff62738ba5c1755b05cbabb7b3ff0518",
+    "submodules/cmd-exit.js": "6cfbc53451a9ff91d8f49efe0fc0d33e93060ed16a9cf85b4013da9be8d7eb70",
     "submodules/cmd-lobby.js": "ab1adbf7e5dfb6640096ea93edef513135fd9a14c6c4ad4980d637b17aa12c0f",
     "submodules/cmd-reset.js": "62ccd0f9c5744e1f65efc01d3fea329e9aeb24ad61d7f9c95a2399dcc5fa7d42"
   }

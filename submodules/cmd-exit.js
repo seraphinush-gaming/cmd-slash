@@ -7,7 +7,7 @@ class cmd_exit {
     this.command = parent.mod.command;
 
     // command
-    parent.mod.command.add('exit', () => {
+    parent.mod.command.add(['exit', '종료'], () => {
       parent.mod.send('C_EXIT', 1, {});
     });
 
@@ -19,7 +19,7 @@ class cmd_exit {
   }
 
   destructor() {
-    this.command.remove('exit');
+    this.command.remove(['exit', '종료']);
   }
 
 }

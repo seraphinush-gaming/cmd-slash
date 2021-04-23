@@ -1,5 +1,5 @@
 ```
-Support seraph via paypal donations, thanks in advance !
+Support seraph via donations, thanks in advance !
 ```
 
 # cmd-slash [![](https://img.shields.io/badge/paypal-donate-333333.svg?colorA=0070BA&colorB=333333)](https://www.paypal.me/seraphinush) [![](https://img.shields.io/badge/patreon-pledge-333333.svg?colorA=F96854&colorB=333333)](https://www.patreon.com/seraphinush)
@@ -9,23 +9,24 @@ tera-toolbox module compilation to use slash commands for common functions
 - Create a folder called `cmd-slash` in `tera-toolbox/mods` and download >> [`module.json`](https://raw.githubusercontent.com/seraphinush-gaming/cmd-slash/master/module.json) << (right-click this link and save link as..) into the folder
 
 ## Usage
-- __`ace` · `ㅁㅊㄷ` · `시험`__
+- `ace` · `ㅁㅊㄷ` · `시던`
   - No argument : rotates through Baracos' Trial > Akasha's Trial > Lilith's Trial > ..
     - Rotation does not include Lumikan's Trial
   - `a` · `akasha` : enter Akasha's Trial
   - `b` · `baracos` : enter Baracos' Trial
   - `c` · `catalepticon` : enter Lumikan's Trial
+  - `g` · `gardan` : enter Gardan's Trial
   - `l` · `lilith` : enter Lilith's Trial
   - Time attack and hits taken count trial by default
-- __`broker` · `거래`__
+- `broker` · `거중`
   - Call broker UI
-- __`dr` · `ㅇㄱ` · `ㅌㅌ` · `xx`__
+- `dr` · `ㅇㄱ` · `ㅌㅌ` · `xx`
   - Drop party/raid
-- __`exit`__
+- `exit` · `종료`
   - Quit TERA
-- __`lobby` · `로비`__
+- `lobby` · `로비`
   - Return to lobby
-- __`res` · `ㄱㄷㄴ` · `ㄹㄹ` · `ff`__
+- `res` · `ㄱㄷㄴ` · `ㄹㄹ` · `ff`
   - Reset dungeon
 
 ## Info

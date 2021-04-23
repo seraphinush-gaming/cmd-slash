@@ -4,6 +4,7 @@ const AKASHA = 9031;
 const BARACOS = 9032;
 const LILITH = 3016;
 const CATALEPTICON = 3040;
+const GARDAN = 3042;
 
 class cmd_ace {
 
@@ -13,7 +14,7 @@ class cmd_ace {
     this.command = parent.mod.command;
 
     // command
-    parent.mod.command.add(['ace', 'ㅁㅊㄷ', '시험'], {
+    parent.mod.command.add(['ace', 'ㅁㅊㄷ', '시던'], {
       '$none': () => {
         if (parent.mod.game.me.zone == AKASHA) this.enter_ace_dungeon(LILITH, 1, 2)
         else if (parent.mod.game.me.zone == BARACOS) this.enter_ace_dungeon(AKASHA, 1, 2);
@@ -25,12 +26,13 @@ class cmd_ace {
         else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS, 1, 2);
         else if (arg == 'l' || arg == 'lilith') this.enter_ace_dungeon(LILITH, 1, 2);
         else if (arg == 'c' || arg == 'catalepticon') this.enter_ace_dungeon(CATALEPTICON, 1, 2);
+        else if (arg == 'g' || arg == 'gardan') this.enter_ace_dungeon(GARDAN, 1, 2);
       }
     });
 
     // code
     parent.mod.hook('S_SYSTEM_MESSAGE', 1, { order: 10 }, (e) => {
-      if (![AKASHA, BARACOS, LILITH].includes(parent.mod.game.me.zone))
+      if (![AKASHA, BARACOS, LILITH, CATALEPTICON, GARDAN].includes(parent.mod.game.me.zone))
         return;
 
       let msg = parent.mod.parseSystemMessage(e.message).id;
@@ -41,7 +43,7 @@ class cmd_ace {
   }
 
   destructor() {
-    this.command.remove(['ace', 'ㅁㅊㄷ', '시험']);
+    this.command.remove(['ace', 'ㅁㅊㄷ', '시던']);
   }
 
   // helper
