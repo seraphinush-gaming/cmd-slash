@@ -1,6 +1,6 @@
 'use strict';
 
-class cmd_broker {
+class CommandBroker {
 
   constructor(parent) {
 
@@ -19,4 +19,4 @@ class cmd_broker {
 
 }
 
-module.exports = cmd_broker;
+module.exports = CommandBroker;

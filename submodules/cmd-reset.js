@@ -1,6 +1,6 @@
 'use strict';
 
-class cmd_reset {
+class CommandReset {
 
   constructor(parent) {
 
@@ -19,4 +19,4 @@ class cmd_reset {
 
 }
 
-module.exports = cmd_reset;
+module.exports = CommandReset;

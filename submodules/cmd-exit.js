@@ -1,6 +1,6 @@
 'use strict';
 
-class cmd_exit {
+class CommandExit {
 
   constructor(parent) {
 
@@ -24,4 +24,4 @@ class cmd_exit {
 
 }
 
-module.exports = cmd_exit;
+module.exports = CommandExit;

@@ -1,6 +1,6 @@
 'use strict';
 
-class cmd_lobby {
+class CommandLobby {
 
   constructor(parent) {
 
@@ -19,4 +19,4 @@ class cmd_lobby {
 
 }
 
-module.exports = cmd_lobby;
+module.exports = CommandLobby;

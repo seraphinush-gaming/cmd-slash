@@ -1,6 +1,6 @@
 'use strict';
 
-class cmd_drop {
+class CommandDrop {
 
   constructor(parent) {
 
@@ -19,4 +19,4 @@ class cmd_drop {
 
 }
 
-module.exports = cmd_drop;
+module.exports = CommandDrop;

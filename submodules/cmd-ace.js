@@ -5,8 +5,9 @@ const BARACOS = 9032;
 const LILITH = 3016;
 const CATALEPTICON = 3040;
 const GARDAN = 3042;
+const HARNOVOG = 3043;
 
-class cmd_ace {
+class CommandAce {
 
   constructor(parent) {
 
@@ -22,17 +23,19 @@ class cmd_ace {
         else this.enter_ace_dungeon(BARACOS, 1, 2);
       },
       '$default': (arg) => {
+        arg = arg.toLowerCase();
         if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA, 1, 2);
         else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS, 1, 2);
         else if (arg == 'l' || arg == 'lilith') this.enter_ace_dungeon(LILITH, 1, 2);
         else if (arg == 'c' || arg == 'catalepticon') this.enter_ace_dungeon(CATALEPTICON, 1, 2);
         else if (arg == 'g' || arg == 'gardan') this.enter_ace_dungeon(GARDAN, 1, 2);
+        else if (arg == 'h' || arg == 'harnovog') this.enter_ace_dungeon(HARNOVOG, 1, 2);
       }
     });
 
     // code
     parent.mod.hook('S_SYSTEM_MESSAGE', 1, { order: 10 }, (e) => {
-      if (![AKASHA, BARACOS, LILITH, CATALEPTICON, GARDAN].includes(parent.mod.game.me.zone))
+      if (![AKASHA, BARACOS, LILITH, CATALEPTICON, GARDAN, HARNOVOG].includes(parent.mod.game.me.zone))
         return;
 
       let msg = parent.mod.parseSystemMessage(e.message).id;
@@ -59,9 +62,9 @@ class cmd_ace {
       unk4: 21,
       challenge2: b
     });
-    !res ? this.parent.send(`Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.`) : null;
+    if (!res) this.parent.send(`Unmapped protocol packet &lt;C_DUNGEON_WORK_ENTER&gt;.`);
   }
 
 }
 
-module.exports = cmd_ace;
+module.exports = CommandAce;

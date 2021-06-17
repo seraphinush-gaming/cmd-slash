@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-class command_slash {
+class CommandSlash {
 
   constructor(mod) {
 
@@ -57,4 +57,4 @@ class command_slash {
 
 }
 
-module.exports = { NetworkMod: command_slash };
+module.exports = { NetworkMod: CommandSlash };
