@@ -47,6 +47,9 @@ class CommandAce {
 
   destructor() {
     this.command.remove(['ace', 'ㅁㅊㄷ', '시던']);
+
+    this.command = undefined;
+    this.mod = undefined;
   }
 
   // helper

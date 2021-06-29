@@ -20,6 +20,8 @@ class CommandExit {
 
   destructor() {
     this.command.remove(['exit', '종료']);
+
+    this.command = undefined;
   }
 
 }

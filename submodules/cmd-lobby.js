@@ -15,6 +15,8 @@ class CommandLobby {
 
   destructor() {
     this.command.remove(['lobby', '로비']);
+
+    this.command = undefined;
   }
 
 }

@@ -15,6 +15,8 @@ class CommandReset {
 
   destructor() {
     this.command.remove(['res', 'ㄱㄷㄴ', 'ㄹㄹ', 'ff']);
+
+    this.command = undefined;
   }
 
 }

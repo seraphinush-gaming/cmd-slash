@@ -29,6 +29,9 @@ class CommandSlash {
 
       this.mod.log(`.. Unloaded submodule [${submodule}]`);
     }
+
+    this.submodules = undefined;
+    this.mod = undefined;
   }
 
   init(submodules) {

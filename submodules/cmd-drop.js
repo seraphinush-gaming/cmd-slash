@@ -15,6 +15,8 @@ class CommandDrop {
 
   destructor() {
     this.command.remove(['dr', 'ㅇㄱ', 'ㅌㅌ', 'xx']);
+
+    this.command = undefined;
   }
 
 }
