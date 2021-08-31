@@ -1,12 +1,12 @@
 {
   "files": {
-    "README.md": "8b4aead006441a440102dfbe3f588881888018e8fdf084c3065b3243373fc4a2",
+    "README.md": "2bab550702eede377b92c29a182296e1322bfc92492fbc52bb8f463d8e014efb",
     "index.js": "a41c144d594a96d80f95dfafc3c6b10cc43f5dc2f925231f32e3ad138ef1de6b",
-    "module.json": "c09d52f2bb6f30e83cb261a5295f539b097a3c8baaf079665444d16325176f3c",
-    "submodules/cmd-ace.js": "0621fdfad1d6c05b8c2b8ba9ea9ef3b7f4a96ca2003f93d832161cf0d5e667fe",
+    "module.json": "1521a1046b7bbbd962ae470ae7b950a6714c259f2400e629352799f62046e91b",
+    "submodules/cmd-ace.js": "61fce628fc6295358c86cad063caa9d0a8de80c3bba4db99068a24c6d04a821e",
     "submodules/cmd-broker.js": "28a6c8a3977ca48629296c7f489ce3e24d5ae69741529d099997d23924d0db93",
     "submodules/cmd-drop.js": "90898a5128cdf0d8b20f4aad14808c2b79b8ea48c5933166ba0b70afd285f429",
-    "submodules/cmd-exit.js": "2047b26a8f012dc9581ce7cc45219611b923a7ed9614987b68273931fbcd7b84",
+    "submodules/cmd-exit.js": "dd8b375679b0fdc7a402ea4e9a9487c9c04c1afe11ca944d7354392ffaff22e3",
     "submodules/cmd-lobby.js": "6e5aaa33e0d7706f5036df9048e1a610d3e1a87dc4ec7bcc765292bcd32a199d",
     "submodules/cmd-reset.js": "54c71867d5065ab2a42aa37e433a3a986448b26f1e1abf3467de3047939c79a6"
   }

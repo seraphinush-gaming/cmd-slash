@@ -10,8 +10,8 @@ tera-toolbox module compilation to use slash commands for common functions
 
 ## Usage
 - `ace` · `ㅁㅊㄷ` · `시던`
-  - No argument : rotates through Baracos' Trial > Akasha's Trial > Lilith's Trial > ..
-    - Rotation does not include Lumikan's Trial, Gardan's Trial, or Harnovog's Trial
+  - No argument : rotates through Baracos' Trial > Akasha's Trial > ..
+    - Rotation does not include Lilith's Trial, Lumikan's Trial, Gardan's Trial, or Harnovog's Trial
   - `a` · `akasha` : enter Akasha's Trial
   - `b` · `baracos` : enter Baracos' Trial
   - `c` · `catalepticon` : enter Lumikan's Trial

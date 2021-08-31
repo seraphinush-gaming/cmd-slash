@@ -17,19 +17,19 @@ class CommandAce {
     // command
     parent.mod.command.add(['ace', 'ㅁㅊㄷ', '시던'], {
       '$none': () => {
-        if (parent.mod.game.me.zone == AKASHA) this.enter_ace_dungeon(LILITH, 1, 2)
-        else if (parent.mod.game.me.zone == BARACOS) this.enter_ace_dungeon(AKASHA, 1, 2);
-        else if (parent.mod.game.me.zone == LILITH) this.enter_ace_dungeon(BARACOS, 1, 2);
-        else this.enter_ace_dungeon(BARACOS, 1, 2);
+        if (parent.mod.game.me.zone == AKASHA) this.enterAceDungeon(BARACOS, 1, 2);
+        else if (parent.mod.game.me.zone == BARACOS) this.enterAceDungeon(AKASHA, 1, 2);
+        //else if (parent.mod.game.me.zone == LILITH) this.enterAceDungeon(BARACOS, 1, 2);
+        else this.enterAceDungeon(BARACOS, 1, 2);
       },
       '$default': (arg) => {
         arg = arg.toLowerCase();
-        if (arg == 'a' || arg == 'akasha') this.enter_ace_dungeon(AKASHA, 1, 2);
-        else if (arg == 'b' || arg == 'baracos') this.enter_ace_dungeon(BARACOS, 1, 2);
-        else if (arg == 'l' || arg == 'lilith') this.enter_ace_dungeon(LILITH, 1, 2);
-        else if (arg == 'c' || arg == 'catalepticon') this.enter_ace_dungeon(CATALEPTICON, 1, 2);
-        else if (arg == 'g' || arg == 'gardan') this.enter_ace_dungeon(GARDAN, 1, 2);
-        else if (arg == 'h' || arg == 'harnovog') this.enter_ace_dungeon(HARNOVOG, 1, 2);
+        if (arg == 'a' || arg == 'akasha') this.enterAceDungeon(AKASHA, 1, 2);
+        else if (arg == 'b' || arg == 'baracos') this.enterAceDungeon(BARACOS, 1, 2);
+        else if (arg == 'l' || arg == 'lilith') this.enterAceDungeon(LILITH, 1, 2);
+        else if (arg == 'c' || arg == 'catalepticon') this.enterAceDungeon(CATALEPTICON, 1, 2);
+        else if (arg == 'g' || arg == 'gardan') this.enterAceDungeon(GARDAN, 1, 2);
+        else if (arg == 'h' || arg == 'harnovog') this.enterAceDungeon(HARNOVOG, 1, 2);
       }
     });
 
@@ -53,7 +53,7 @@ class CommandAce {
   }
 
   // helper
-  enter_ace_dungeon(zone, a = 1, b = 2) {
+  enterAceDungeon(zone, a = 1, b = 2) {
     let res = this.parent.mod.trySend('C_DUNGEON_WORK_ENTER', 1, {
       count: 2,
       unk1: 13,
