@@ -12,9 +12,9 @@ class CommandExit {
     });
 
     // code
-    /* parent.mod.hook('S_PREPARE_EXIT', 'event', () => {
+    parent.mod.hook('S_PREPARE_EXIT', 'event', () => {
       parent.mod.send('S_EXIT', 3, {});
-    }); */
+    });
 
   }
 
