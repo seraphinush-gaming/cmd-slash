@@ -11,13 +11,14 @@ tera-toolbox module compilation to use slash commands for common functions
 ## Usage
 - `ace` · `ㅁㅊㄷ` · `시던`
   - No argument : rotates through Baracos' Trial > Akasha's Trial > ..
-    - Rotation does not include Lilith's Trial, Lumikan's Trial, Gardan's Trial, or Harnovog's Trial
+    - Rotation does not include Lilith's Trial, Lumikan's Trial, Gardan's Trial, Harnovog's Trial, or Rogash's Trial
   - `a` · `akasha` : enter Akasha's Trial
   - `b` · `baracos` : enter Baracos' Trial
   - `c` · `catalepticon` : enter Lumikan's Trial
   - `g` · `gardan` : enter Gardan's Trial
   - `h` · `harnovog` : enter Harnovog's Trial
   - `l` · `lilith` : enter Lilith's Trial
+  - `r` · `rogash` : enter Rogash's Trial
   - Time attack and hits taken count trial by default
 - `broker` · `거중`
   - Call broker UI
@@ -44,6 +45,10 @@ tera-toolbox module compilation to use slash commands for common functions
 ## Changelog
 <details>
 
+    2.0c
+    - Added Rogash's Trial support for `ace` option
+    2.0b
+    - Removed Lilith's Trial from rotation for `ace` option
     2.0a
     - Added Lumikan's Trial support for `ace` option
     2.09

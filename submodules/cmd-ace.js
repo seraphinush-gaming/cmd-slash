@@ -6,6 +6,7 @@ const LILITH = 3016;
 const CATALEPTICON = 3040;
 const GARDAN = 3042;
 const HARNOVOG = 3043;
+const ROGASH = 3046;
 
 class CommandAce {
 
@@ -30,12 +31,13 @@ class CommandAce {
         else if (arg == 'c' || arg == 'catalepticon') this.enterAceDungeon(CATALEPTICON, 1, 2);
         else if (arg == 'g' || arg == 'gardan') this.enterAceDungeon(GARDAN, 1, 2);
         else if (arg == 'h' || arg == 'harnovog') this.enterAceDungeon(HARNOVOG, 1, 2);
+        else if (arg == 'r' || arg == 'rogash') this.enterAceDungeon(ROGASH, 1, 2);
       }
     });
 
     // code
     parent.mod.hook('S_SYSTEM_MESSAGE', 1, { order: 10 }, (e) => {
-      if (![AKASHA, BARACOS, LILITH, CATALEPTICON, GARDAN, HARNOVOG].includes(parent.mod.game.me.zone))
+      if (![AKASHA, BARACOS, LILITH, CATALEPTICON, GARDAN, HARNOVOG, ROGASH].includes(parent.mod.game.me.zone))
         return;
 
       let msg = parent.mod.parseSystemMessage(e.message).id;
